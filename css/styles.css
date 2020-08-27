@@ -1,7 +1,7 @@
 /* ---------------------------------- NAVBAR STYLING  ---------------------------------- */
 
 .bg-custom{
-    background-color: 555A6F; 
+    background-color: #555A6F; 
 }
 
 .nav-link{
@@ -9,3 +9,12 @@
     font-size: 10;
     color: white !important;
 } 
+
+footer{
+    background-color: #555A6F; 
+    padding: 35px;
+    text-align: center;
+    width: 100%;
+    bottom: 0px; 
+    position: absolute;
+}
