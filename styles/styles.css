@@ -83,7 +83,7 @@ nav {
         font-size: 12px;
     }
 }
-     
+
 
 
 .dropdown {
@@ -185,7 +185,7 @@ nav {
 footer {
     padding: 35px;
     width: 100%;
-    bottom: 0px; 
+    bottom: 0px;
     text-align: center;
     background-color: #5B0005;
 }
@@ -333,9 +333,9 @@ footer {
 .text{
     text-align: center;
     margin-left: 200px;
-    margin-right: 200px; 
+    margin-right: 200px;
     margin-top: 100px;
-    margin-bottom: 100px;  
+    margin-bottom: 100px;
 }
 
 .graphic-container{
@@ -350,8 +350,8 @@ footer {
 }
 
 .graphic img{
-    width: 30%; 
-    float: left; 
+    width: 30%;
+    float: left;
 }
 
 .graphic-text{
