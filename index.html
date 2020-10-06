@@ -1,0 +1,240 @@
+<html>
+<head>
+   <style>
+        /* hides "Team:Cornell" and iGEM logo */
+        #top_title {
+            display: none;
+        }
+
+        /* removes padding below footer */
+        #globalWrapper {
+            padding: 0;
+        }
+
+        #content {
+            padding: 0px;
+            width: 100% !important;
+            margin-top: 0px;
+            margin-left: 0px ;
+        }
+
+        /* removes default styling for home banner tagline */
+        #HQ_page p {
+            font-family: 'Opens Sans', sans-serif;
+        }
+
+        /* removes small extra margin at very bottom below footer */
+        p {
+            margin: 0;
+        }
+
+        /* removes bullets from Toolkit dropdown menu */
+        ul {
+            list-style-image: none;
+        }
+
+    </style>
+    <title>Team:Cornell - 2019.igem.org</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/grids.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("SCROLL");
+            /* Every time the window is scrolled ... */
+            /*$('.graphic-container').each( function(i){
+                $(this).animate({'opacity':'1'},1500);  
+            }); */
+            $('body').scroll( function(){       
+                console.log("SCROOLL");
+                /* Check the location of each desired element */
+                $('.graphic-container').each( function(i){
+                    var top_of_object = $(this).position().top;
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    var top_of_window = $(window).scrollTop();
+                    /* If the object is completely visible in the window, fade it it */
+
+                    if( (bottom_of_window > bottom_of_object) && ($(this).css("opacity")=="0")){       
+                       $(this).animate({'opacity':'1'},1500);   
+                        console.log("FADE IN");
+                    } 
+                    else if ((bottom_of_window < top_of_object) && ($(this).css("opacity")=="1")){
+                        $(this).css({"opacity":"0"});  
+                        console.log("FADDE OUT"); 
+                    }
+                }); 
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class = "home-page-wrapper">
+        <!------------------------ NAV BAR START ------------------------>
+        <nav>
+            <div class="nav-bar-wrapper">
+                <div class="nav-bar-main-menu">
+                  <a href="http://2019.igem.org/Team:Cornell"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
+                    <div class="dropdown">
+                        <button class="dropbtn">TEAM</button>
+                        <div class="dropdown-content team-dropdown-content">
+                            <a href="http://2019.igem.org/Team:Cornell/Team">BIOS</a>
+                            <a href="http://2019.igem.org/Team:Cornell/Sponsors">SPONSORS</a>
+                            <a href="http://2019.igem.org/Team:Cornell/Attributions">ATTRIBUTIONS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">OUTREACH</button>
+                        <div class="dropdown-content outreach-dropdown-content">
+                            <a href="https://2019.igem.org/Team:Cornell/EducationAndEngagement">EDUCATION & ENGAGEMENT</a>
+                            <a href="https://2019.igem.org/Team:Cornell/Collaborations">COLLABORATIONS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">HUMAN PRACTICES</button>
+                        <div class="dropdown-content human-dropdown-content">
+                            <a href="https://2019.igem.org/Team:Cornell/IntegratedPractices">INTEGRATED PRACTICES</a>
+                            <a href="https://2019.igem.org/Team:Cornell/Policies">POLICIES</a>
+                            <a href="https://2019.igem.org/Team:Cornell/Entrepreneurship">ENTREPRENEURSHIP</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn"
+                            onclick="location.href='http://2019.igem.org/Team:Cornell/Model'">MODELING</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">TOOLKIT</button>
+                        <div class="dropdown-content toolkit-dropdown-content">
+                            <ul>
+                                <div class="nav-first-col">
+                                    <li class="wet-lab-list-title"><b>WET LAB</b></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/Foundations">FOUNDATIONS</a></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/Demonstrate">DEMONSTRATE</a></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/Parts">PARTS</a></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/BasicParts">BASIC PARTS</a></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/CompositeParts">COMPOSITE PARTS</a></li>
+                                </div>
+                                <div class="nav-second-col">
+                                    <li class="pd-list-title"><b>DESIGN</b></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/DesignProcess">DESIGN PROCESS</a></li>
+                                </div>
+                                <div class="nav-third-col">
+                                    <li class="doc-list-title"><b>DOCUMENTATION</b></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/Notebook">NOTEBOOK</a></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/Safety">SAFETY</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn"
+                            onclick="location.href='http://2019.igem.org/Team:Cornell/Description'">ABOUT</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn active-page"
+                            onclick="location.href='http://2019.igem.org/Team:Cornell'">HOME</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!------------------------ NAV BAR END ------------------------->
+
+        <!------------------------ BANNER START ------------------------>
+
+        <div class="home-banner-wrapper">
+            <div class="banner-container">
+            </div>
+        </div>
+        <!------------------------ BANNER END -------------------------->
+
+        <!------------------------ TEXT START -------------------------->
+        <div class="text">
+            The American Cancer Society estimates that about 276,000 women will be diagnosed with new cases of invasive breast cancer in 2020. One in eight women are expected to develop breast cancer at some point in their lives.
+        </div>
+        <!------------------------ TEXT END ---------------------------->
+
+        <!----------------------- GRAPHICS START ----------------------->
+
+        <div class="container"> 
+
+            <div class="graphic-container">
+                <div class="graphic">
+                    <img src="images/placeholder.jpg">                    
+                </div>
+                <div class="graphic-text">
+                    <p>A common existing form of treatment is chemotherapy. Chemotherapy works by targeting fast-growing cells within the body. However, since chemotherapy is administered intravenously, it may be ineffective on tumors that lack vasculature.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text">
+                The American Cancer Society estimates that about 276,000 women will be diagnosed with new cases of invasive breast cancer in 2020. One in eight women are expected to develop breast cancer at some point in their lives.
+            </div>
+
+            <div class="graphic-container">
+                <div class="graphic">
+                    <img src="images/placeholder.jpg">                    
+                </div>
+                <div class="graphic-text">
+                    <p>After a doctor identifies a tumor and gives a diagnosis of breast cancer, he or she can use Lumicure’s bacterial therapy system, Trichotherapy. Genetically modified E. coli are injected into the site of the tumor and then grow specifically in cancer cells through immune selection. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="graphic-container">
+                <div class="graphic">
+                    <img style="float: right" src="images/placeholder.jpg">                    
+                </div>
+                <div style="float:left" class="graphic-text">
+                    <p>The bacteria then constantly produce the therapeutic trichosanthin, which then weakens and destroys cancer cells. The bacterial presence may also recruit components of the immune system into the tumor, assisting in the destruction of cancer cells. An included safety switch prevents the spread of bacteria into healthy tissue. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="graphic-container">
+                <div class="graphic">
+                    <img src="images/placeholder.jpg">                    
+                </div>
+                <div class="graphic-text">
+                    <p>The patient can then monitor the primary tumor through Trichoscan: a self-operated fluorescent imaging device which detects a signal from a fluorescent protein produced by the bacteria known as mCardinal. The patient is also able to locate metastases elsewhere in the body. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="text">
+                The American Cancer Society estimates that about 276,000 women will be diagnosed with new cases of invasive breast cancer in 2020. One in eight women are expected to develop breast cancer at some point in their lives.
+            </div>
+        </div>
+
+
+        
+
+        <!----------------------- GRAPHICS END ------------------------->
+
+        <!------------------------ FOOTER START ------------------------>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="icon-wrapper">
+                    <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
+                </div>
+                <div class="icon-wrapper">
+                    <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
+                </div>
+                <div class="icon-wrapper">
+                    <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
+                </div>
+                <div class="icon-wrapper icon-wrapper-last">
+                    <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
+                </div>
+            </div>
+        </footer>
+        <!------------------------ FOOTER END ------------------------>
+    </div>
+</body>
+</html>

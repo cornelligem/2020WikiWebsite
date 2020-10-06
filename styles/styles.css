@@ -1,0 +1,662 @@
+/******************** ALL FONTS START ********************/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@font-face {
+    font-family: 'Futura';
+    src: url('../futura/futura\ medium\ bt.ttf');
+}
+
+body {
+    font-family: 'PT Serif', serif;
+}
+
+.dropbtn, .dropdown-content {
+    font-size: 16px;
+}
+
+.standard-page-banner > svg > text, .standard-page-content-title, .standard-page-side-bar-wrapper {
+    font-family: 'Futura', sans-serif;
+}
+
+.tile-title {
+    font-family: 'Futura', sans-serif;
+}
+
+/******************** ALL FONTS END ********************/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-size: 40px 40px;
+}
+
+p {
+    color: #000;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+nav {
+    padding-top: 30px;
+    /* padding-bottom: 30px; */
+    padding-right: 100px;
+    background-color: #5B0005;
+    height: 98px;
+}
+
+.nav-bar-logo {
+    vertical-align: top;
+    display: inline-block;
+    float: left;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.nav-bar-logo img {
+    width: 140px;
+}
+
+.home-banner-wrapper {
+    position: relative;
+    background: #5B0005;
+    height: 675px;
+    width: 100%;
+    margin-top: -5px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0px;
+    border: none;
+    color: #fff;
+}
+
+@media (max-width: 1050px) {
+    .dropbtn {
+        font-size: 12px;
+    }
+}
+     
+
+
+.dropdown {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown a {
+    position: relative;
+    display: inline-block;
+    color: #e8b023;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #016c64;
+    color: #ffffff;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a:hover {
+    background-color: #a0e0bd !important;
+}
+
+.toolkit-dropdown-content {
+    width: 590px;
+    left: -160px;
+}
+
+.modeling-dropdown-content {
+    left: -40px;
+}
+
+.human-dropdown-content {
+    left: 12px;
+}
+
+.outreach-dropdown-content {
+    width: 230px;
+    left: -40px;
+}
+
+.team-dropdown-content {
+    width: 140px;
+    left: -35px;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none !important;
+    display: block;
+}
+
+.wet-lab-list-title,
+.doc-list-title,
+.pd-list-title {
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-bottom: 14px;
+}
+
+.nav-second-col {
+    margin-left: 30px;
+}
+
+.nav-third-col {
+    margin-left: 30px;
+}
+
+.dropbtn:hover,
+.active-page {
+    color: #016c64;
+    transition-duration: 0.5s;
+}
+
+.dropdown-content a:hover {
+    color: #016c64;
+    background-color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer {
+    padding: 35px;
+    width: 100%;
+    bottom: 0px; 
+    text-align: center;
+    background-color: #5B0005;
+}
+
+.footer-wrapper {
+    margin: auto;
+    display: inline-block;
+}
+
+.icon-wrapper {
+    display: inline-block;
+    position: relative;
+    padding-right: 18px;
+    border-right: 0.5px solid white;
+}
+
+.icon-wrapper-last {
+    border-right: none;
+}
+
+.icon {
+    margin: 16px;
+}
+
+.icon img {
+    height: 24px;
+}
+
+
+/******************** SPECIFIC PAGES START ********************/
+
+.notebook-page-content-wrapper,
+.safety-page-content-wrapper,
+.about-page-content-wrapper,
+.attributions-page-content-wrapper {
+    padding-bottom: 5%;
+}
+
+.notebook-content-wrapper,
+.safety-content-wrapper,
+.about-content-wrapper,
+.attributions-page-content-wrapper {
+    padding-right: 100px;
+    padding-left: 90px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.notebook-header-text,
+.safety-header-text,
+.about-header-text {
+    font-size: 24pt;
+    text-align: center;
+    color: #000;
+}
+
+.notebook-text-wrapper,
+.safety-text-wrapper,
+.about-text-wrapper,
+.attributions-text-wrapper {
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.notebook-body-text,
+.safety-body-text,
+.about-body-text {
+    color: #000;
+}
+
+
+/******************** SPECIFIC PAGES END ********************/
+
+
+/******************** HOME PAGE START ********************/
+
+.home-description-wrapper {
+    margin-top: 120px;
+}
+
+.home-description-logo {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.home-description {
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.tiles-wrapper {
+    background-color: #e1e9e7;
+}
+
+.tiles-wrapper img {
+    width: 90%;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto 15px auto;
+}
+
+.tile-wrapper {
+    position: relative;
+}
+
+.tile-title {
+    /* font-family: 'Asap Condensed', sans-serif; */
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    text-align: center;
+    margin-top: 45%;
+}
+
+.pp-title {
+    margin-top: 40%;
+}
+
+.overlay {
+    background-color: transparent;
+    z-index: 512;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.overlay:hover {
+    background-color: #e1e9e7;
+    opacity: 0.6;
+}
+
+.wrapper-space {
+    background-color: #e1e9e6;
+}
+
+.text{
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px; 
+    margin-top: 100px;
+    margin-bottom: 100px;  
+}
+
+.graphic-container{
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.graphic{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.graphic img{
+    width: 30%; 
+    float: left; 
+}
+
+.graphic-text{
+    float: right;
+    width: 60%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+
+/******************** HOME PAGE END ********************/
+
+
+/******************** STANDARD PAGE START ********************/
+
+.standard-page-banner {
+    background-image: url(https://2019igem.org/wiki/images/6/63/T--Cornell--TeamPic.png);
+    background-size: cover;
+    fill: black;
+    font-size: 14px;
+}
+
+.standard-page-side-bar-content-wrapper {
+    padding: 5% 0;
+}
+
+.standard-page-side-bar>li>a {
+    text-decoration: none;
+    color: #016c64;
+    font-size: 16px;
+}
+
+.standard-page-side-bar {
+    list-style-type: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+    margin-top: 40px;
+}
+
+.standard-page-side-bar>li {
+    margin-bottom: 15px;
+}
+
+.standard-page-content-title {
+    font-size: 24px;
+    color: #000 !important;
+    position: relative;
+}
+
+.green-accent-line-left {
+    border: #a0e0bd solid 1px;
+    display: block;
+    float: left;
+    margin: 1em auto 1em auto;
+    width: 80px;
+}
+
+.standard-page-content-subheading {
+    font-size: 18px;
+    font-weight: 1;
+    color: #000;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+
+.standard-page-content-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/******************** STANDARD PAGE END ********************/
+
+
+/******************** TEAM PAGE START ********************/
+
+.team-page-banner {
+    background-color: #a0e0bd;
+}
+
+.team-page-content-area {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.team-page-content-title {
+    font-size: 24px;
+    font-weight: 100;
+    color: #000;
+    padding-bottom: 5px;
+}
+
+.team-page-content-subheading {
+    font-size: 18px;
+    font-weight: 1;
+    color: #000;
+    padding-top: 1%;
+    padding-bottom: 0;
+}
+
+p.team-page-content-text {
+    font-size: 16px;
+    font-weight: 100;
+    color: #000;
+    padding-top: 8%;
+    padding-bottom: 0;
+}
+
+.team-page-content-image {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+}
+
+.team-page-image-left {
+    float: left;
+    width: 40%;
+    padding-right: 50px;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+.team-page-text-right {
+    float: left;
+    width: 55%;
+    padding: 50px;
+    padding-top: 0px;
+    margin-bottom: 10%;
+    box-sizing: border-box;
+}
+
+.team-page-text-left {
+    float: right;
+    width: 55%;
+    padding: 50px;
+    padding-top: 0px;
+    margin-bottom: 10%;
+    box-sizing: border-box;
+}
+
+.team-page-image-right {
+    float: right;
+    width: 40%;
+    padding-left: 50px;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+.team-page-image-left-lastbio {
+    float: left;
+    width: 40%;
+    padding-right: 50px;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+.team-page-text-right-lastbio {
+    float: left;
+    width: 55%;
+    padding: 50px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+#ItaiMeme {
+    height: 50%;
+    width: 50%;
+}
+
+#Avisha {
+    height: 80%;
+    width: 80%;
+}
+
+.gloriabio {
+    padding-top: 50px;
+}
+
+.gloriaimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 360px;
+    float: left;
+}
+
+#CarolBio {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#IshaBio {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+/******************** TEAM PAGE END ********************/
+
+
+/******************** NOTEBOOK PAGE START ********************/
+
+.notebook-page-banner {
+    background-color: #a0e0bd;
+}
+
+.notebook-page-content-wrapper {
+    padding-bottom: 5%;
+}
+
+.notebook-content-wrapper {
+    padding-right: 100px;
+    padding-left: 90px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.notebook-header-text {
+    font-size: 24pt;
+    text-align: center;
+    color: #000;
+}
+
+.notebook-text-wrapper {
+    padding-top: 20px;
+}
+
+.notebook-body-text {
+    color: #000;
+    margin-top: 20px;
+}
+
+#safety-hyperlink {
+    color: #c93843;
+}
+
+
+/******************** NOTEBOOK PAGE END ********************/
+
+
+/******************** SPONSORS PAGE START ********************/
+
+.sponsors-page-banner {
+    background-color: #a0e0bd;
+}
+
+.sponsors-page-content-wrapper {
+    background: #fff;
+    padding: 5% 0;
+}
+
+.sponsor-image-wrapper,
+.sponsor-description-wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.sponsor-description-wrapper {
+    display: table;
+}
+
+.sponsor-image {
+    display: block;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sponsor-description-wrapper {
+    margin-left: 100px;
+}
+
+.sponsor-description {
+    display: table-cell;
+    /* font-family: 'Open Sans', sans-serif; */
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+
+/******************** SPONSORS PAGE END ********************/
+
+
+/******************** ATRIBUTIONS PAGE START ********************/
+
+.attributions-page-banner {
+    background-color: #a0e0bd;
+}
+
+.attributions-body-text {
+    /* font-family: 'Open Sans', serif; */
+    font-size: 16px;
+    color: #000;
+}
+
+
+/******************** ATTRIBUTIONS PAGE END ********************/
+
+
+/******************** ENTREPRENEURSHIP PAGE START ********************/
+
+.entrepreneurship-page-banner {
+    background-color: #a0e0bd;
+}
+
+
+/******************** ENTREPRENEURSHIP PAGE END ********************/
