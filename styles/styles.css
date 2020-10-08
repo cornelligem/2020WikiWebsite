@@ -1,5 +1,6 @@
 /******************** ALL FONTS START ********************/
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @font-face {
     font-family: 'Futura';
     src: url('../futura/futura\ medium\ bt.ttf');
@@ -10,11 +11,12 @@ body {
 }
 
 .dropbtn, .dropdown-content {
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
 
 .standard-page-banner > svg > text, .standard-page-content-title, .standard-page-side-bar-wrapper {
-    font-family: 'Futura', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .tile-title {
@@ -169,7 +171,7 @@ nav {
 
 .dropbtn:hover,
 .active-page {
-    color: #016c64;
+    color: #E89E2B;
     transition-duration: 0.5s;
 }
 
@@ -368,7 +370,7 @@ footer {
 /******************** STANDARD PAGE START ********************/
 
 .standard-page-banner {
-    background-image: url(https://2019igem.org/wiki/images/6/63/T--Cornell--TeamPic.png);
+    background-color: #275E69;
     background-size: cover;
     fill: black;
     font-size: 14px;
@@ -380,8 +382,8 @@ footer {
 
 .standard-page-side-bar>li>a {
     text-decoration: none;
-    color: #016c64;
-    font-size: 16px;
+    color: #000000;
+    font-size: 25px;
 }
 
 .standard-page-side-bar {
