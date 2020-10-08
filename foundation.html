@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+       /* hides "Team:Cornell" and iGEM logo */
+       #top_title {
+           display: none;
+       }
+
+       /* removes padding below footer */
+       #globalWrapper {
+           padding: 0;
+       }
+
+       #content {
+           padding: 0px;
+           width: 100% !important;
+           margin-top: 0px;
+           margin-left: 0px ;
+       }
+
+       /* removes default styling for home banner tagline */
+       #HQ_page p {
+           font: 'Open San', sans-serif;
+           font-size: 16px;
+           font-weight: 100;
+           color: #000;
+           padding-top: 0;
+           padding-bottom: 0;
+       }
+
+       /* removes small extra margin at very bottom below footer */
+       p {
+           margin: 0;
+       }
+
+       /* removes bullets from Toolkit dropdown menu */
+       ul {
+           list-style-image: none;
+       }
+
+   </style>
+    <title>Team:Cornell - 2019.igem.org</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/grids.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("SCROLL");
+            /* Every time the window is scrolled ... */
+            /*$('.graphic-container').each( function(i){
+                $(this).animate({'opacity':'1'},1500);
+            }); */
+            $('body').scroll( function(){
+                console.log("SCROOLL");
+                /* Check the location of each desired element */
+                $('.graphic-container').each( function(i){
+                    var top_of_object = $(this).position().top;
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    var top_of_window = $(window).scrollTop();
+                    /* If the object is completely visible in the window, fade it it */
+
+                    if( (bottom_of_window > bottom_of_object) && ($(this).css("opacity")=="0")){
+                       $(this).animate({'opacity':'1'},1500);
+                        console.log("FADE IN");
+                    }
+                    else if ((bottom_of_window < top_of_object) && ($(this).css("opacity")=="1")){
+                        $(this).css({"opacity":"0"});
+                        console.log("FADDE OUT");
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+<!--NOTE: REMEMBER TO CHANCE active-page CLASS TO CORRECT DROPDOWN-->
+<body>
+    <div class ="standard-page-wrapper">
+        <!------------------------ NAV BAR START ------------------------>
+        <nav>
+            <div class="nav-bar-wrapper">
+                <div class="nav-bar-main-menu">
+                  <a href="http://2019.igem.org/Team:Cornell"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
+                    <div class="dropdown">
+                        <button class="dropbtn">TEAM</button>
+                        <div class="dropdown-content team-dropdown-content">
+                            <a href="http://2019.igem.org/Team:Cornell/Team">BIOS</a>
+                            <a href="http://2019.igem.org/Team:Cornell/Sponsors">SPONSORS</a>
+                            <a href="http://2019.igem.org/Team:Cornell/Attributions">ATTRIBUTIONS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">OUTREACH</button>
+                        <div class="dropdown-content outreach-dropdown-content">
+                            <a href="https://2019.igem.org/Team:Cornell/EducationAndEngagement">EDUCATION & ENGAGEMENT</a>
+                            <a href="https://2019.igem.org/Team:Cornell/Collaborations">COLLABORATIONS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">HUMAN PRACTICES</button>
+                        <div class="dropdown-content human-dropdown-content">
+                            <a href="https://2019.igem.org/Team:Cornell/IntegratedPractices">INTEGRATED PRACTICES</a>
+                            <a href="https://2019.igem.org/Team:Cornell/Policies">POLICIES</a>
+                            <a href="https://2019.igem.org/Team:Cornell/Entrepreneurship">ENTREPRENEURSHIP</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn"
+                            onclick="location.href='http://2019.igem.org/Team:Cornell/Model'">MODELING</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">TOOLKIT</button>
+                        <div class="dropdown-content toolkit-dropdown-content">
+                            <ul>
+                                <div class="nav-first-col">
+                                    <li class="wet-lab-list-title"><b>WET LAB</b></li>
+                                    <li><a href="foundation.html">FOUNDATIONS</a></li>
+                                    <li><a href="demonstrate.html">DEMONSTRATE</a></li>
+                                    <li><a href="parts.html">PARTS</a></li>
+                                    <li><a href="basic_part.html">BASIC PARTS</a></li>
+                                    <li><a href="composite_part.html">COMPOSITE PARTS</a></li>
+                                </div>
+                                <div class="nav-second-col">
+                                    <li class="pd-list-title"><b>DESIGN</b></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/DesignProcess">DESIGN PROCESS</a></li>
+                                </div>
+                                <div class="nav-third-col">
+                                    <li class="doc-list-title"><b>DOCUMENTATION</b></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/Notebook">NOTEBOOK</a></li>
+                                    <li><a href="http://2019.igem.org/Team:Cornell/Safety">SAFETY</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn"
+                            onclick="location.href='http://2019.igem.org/Team:Cornell/Description'">ABOUT</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn active-page"
+                            onclick="location.href='http://2019.igem.org/Team:Cornell'">HOME</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!------------------------ NAV BAR END ------------------------>
+        <!------------------------ STANDARD PAGE BANNER START ------------------------>
+        <header class="standard-page-banner">
+            <svg viewBox="0 0 100 100" width=100% height=100%>
+                <text text-anchor="middle" alignment-baseline="middle" x=50% y=50%>Foundations</text>
+            </svg>
+        </header>
+        <!------------------------ STANDARD PAGE BANNER END ------------------------>
+        <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
+        <div class="standard-page-side-bar-content-wrapper">
+            <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
+            <div class="standard-page-side-bar-wrapper">
+                <ul class="standard-page-side-bar">
+                    <li><a href="#pageheading1">Problem Statement</a></li>
+                    <li><a href="#pageheading2">System Overview/Components</a></li>
+                    <li><a href="#pageheading3">References</a></li>
+                </ul>
+            </div>
+            <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
+            <!------------------------ STANDARD PAGE CONTENT START ------------------------>
+            <div class="standard-page-content-wrapper">
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading1">Problem Statement</div></div>
+
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Mauris a faucibus sem, sit amet lobortis ligula.
+                         Curabitur felis arcu, consequat fingilla nibh nec,
+                         tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
+                          vitae lorem vel, porta maximus neque. Donec viverra
+                          magna sit amet sapien elementum, vitae faucibus.
+                    </p>
+                    <p class="standard-page-content-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Mauris a faucibus sem, sit amet lobortis ligula.
+                         Curabitur felis arcu, consequat fingilla nibh nec,
+                         tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
+                          vitae lorem vel, porta maximus neque. Donec viverra
+                          magna sit amet sapien elementum, vitae faucibus.
+                    </p>
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading2">System Overview/Components</div></div>
+                    <hr class="green-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                        Our project this year aims to design and implement a bacterial solution for harmful algal blooms.
+                        Our proposed system consists of two components: a biological sensor to detect the presence of
+                        microcystins in water, and a filter containing engineered bacteria to degrade the microcystins
+                        (specifically microcystin-LR, the most common of these toxins).
+                    </p>
+                    <p class="standard-page-content-text">
+                        The biological sensor consists of a DNA aptamer conjugated to gold nanoparticles, which specifically
+                        binds microcystin-LR. Binding of the aptamer to microcystin results in a colorimetric change. The
+                        color change can be quantified and related to the microcystin concentration via a standard curve.
+                    </p>
+                    <p class="standard-page-content-text">
+                        Second, to engineer the bacteria for our filter, we have introduced genetic constructs coding for a
+                        specific cassette of enzymes. These enzymes, which are endogenous to Sphingopyxis sp., have been
+                        shown to sequentially break down microcystins. The enzymes are named mlrA through mlrF. MlrA, B,
+                        and C are proteases that degrade MC-LR. MlrD is a transporter protein that carries MC-LR into the
+                        cell. The functions of mlrE and F are yet to be elucidated, but both are believed to assist with
+                        MC-LR degradation. The filter consists of a packed-bed bioreactor, in which water is passed through
+                        a chamber containing our engineered strain immobilized on alginate beads. Additionally, we have
+                        attached a tag from the bacterial twin arginine translocase pathway to target the enzymes to the
+                        bacterial periplasm. Our hope is that moving the enzymes close to the periphery of the bacterial
+                        cell, and therefore closer to the flow of contaminated water, will increase the efficiency of the
+                        reaction. We hope these improvements will maximize our system’s potential for environmental
+                        remediation.
+                    </p>
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading3">References</div></div>
+                    <hr class="green-accent-line-left">
+                    <div class="standard-page-content-subheading">Problem Statement</div>
+                    <p class="standard-page-content-text">
+                        [1] Wikipedia contributors. (2019, July 21). Microcystin-LR. In Wikipedia, The Free Encyclopedia. Retrieved 21:38, October 18, 2019, from https://en.wikipedia.org/w/index.php?title=Microcystin-LR&oldid=907208202.<br>
+                        [2] Guidelines for Drinking-Water Quality, 2nd ed. Addendum to Vol. 2. Health criteria and other supporting information. World Health Organization, Geneva, 1998. <br>
+                        [3] Harmful Algal Blooms. (2019, July 17). Retrieved from https://www.epa.gov/nutrientpollution/harmful-algal-blooms.
+                    </p>
+                    <img class="standard-page-content-image" src="">
+                </div>
+            </div>
+            <!------------------------ STANDARD PAGE CONTENT END ------------------------>
+        </div>
+        <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
+        <!------------------------ FOOTER START ------------------------>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="icon-wrapper">
+                    <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
+                </div>
+                <div class="icon-wrapper">
+                    <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
+                </div>
+                <div class="icon-wrapper">
+                    <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
+                </div>
+                <div class="icon-wrapper icon-wrapper-last">
+                    <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
+                </div>
+            </div>
+        </footer>
+        <!------------------------ FOOTER END ------------------------>
+    </div>
+</body>
+
+</html>
