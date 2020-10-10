@@ -1,0 +1,52 @@
+.home-banner-wrapper {
+    position: relative;
+    background: #5B0005;
+    height: 675px;
+    width: 100%;
+    margin-top: -5px;
+}
+
+#navbar-custom-mainpage {
+    background-color: #161616;
+}
+
+.navbar-custom {
+    background-color: #5B0005;
+}
+
+.navbar-bttn{
+	color: #FAFFEC;
+}
+
+.navbar-toggler .custom-toggler {
+  border-color: #ffffff;
+}
+
+/* change the color of hovered links */
+
+#home-button{
+	text-decoration: none; color: #E89E2B;
+}
+
+.nav-item .nav-link:hover {
+    text-decoration: none; color: #E89E2B;
+}
+
+/* for dropdown only - change the color of dropdown */
+.navbar-custom .dropdown-menu {
+    background-color: #3193de;
+}
+
+.navbar-custom .dropdown-menu {
+    background-color: #3193de;
+}
+
+.navbar-custom .dropdown-item {
+    text-decoration: none; color: black;
+}
+
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    text-decoration: none; color: #E89E2B;
+    background-color:#black;
+}
