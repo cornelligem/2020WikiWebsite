@@ -46,7 +46,7 @@ p {
 nav {
     padding-top: 30px;
     /* padding-bottom: 30px; */
-    padding-right: 100px;
+    padding-right: 40px;
     background-color: #161616;
     height: 98px;
 }
@@ -55,7 +55,7 @@ nav {
     vertical-align: top;
     display: inline-block;
     float: left;
-    margin-left: 80px;
+    margin-left: 40px;
     margin-top: 20px;
 }
 
@@ -660,9 +660,9 @@ p.team-page-content-text {
 /******************** DEMONSTRATIONS PAGE START ********************/
 .standard-page-content-text img{
     width: 600px;
-    height: 400px; 
-    display: block; 
-    margin: auto; 
+    height: 400px;
+    display: block;
+    margin: auto;
 }
 /******************** DEMONSTRATIONS PAGE END ***********************/
 
