@@ -1,5 +1,8 @@
 <html>
 <head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
    <style>
         /* hides "Team:Cornell" and iGEM logo */
         #top_title {
@@ -41,15 +44,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
+    <!--<script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>-->
     <script>
         $(document).ready(function() {
             console.log("SCROLL");
             /* Every time the window is scrolled ... */
             /*$('.graphic-container').each( function(i){
-                $(this).animate({'opacity':'1'},1500);  
+                $(this).animate({'opacity':'1'},1500);
             }); */
-            $('body').scroll( function(){       
+            $('body').scroll( function(){
                 console.log("SCROOLL");
                 /* Check the location of each desired element */
                 $('.graphic-container').each( function(i){
@@ -59,15 +62,15 @@
                     var top_of_window = $(window).scrollTop();
                     /* If the object is completely visible in the window, fade it it */
 
-                    if( (bottom_of_window > bottom_of_object) && ($(this).css("opacity")=="0")){       
-                       $(this).animate({'opacity':'1'},1500);   
+                    if( (bottom_of_window > bottom_of_object) && ($(this).css("opacity")=="0")){
+                       $(this).animate({'opacity':'1'},1500);
                         console.log("FADE IN");
-                    } 
-                    else if ((bottom_of_window < top_of_object) && ($(this).css("opacity")=="1")){
-                        $(this).css({"opacity":"0"});  
-                        console.log("FADDE OUT"); 
                     }
-                }); 
+                    else if ((bottom_of_window < top_of_object) && ($(this).css("opacity")=="1")){
+                        $(this).css({"opacity":"0"});
+                        console.log("FADDE OUT");
+                    }
+                });
                 $('.text').each( function(i){
                     var top_of_object = $(this).position().top;
                     var bottom_of_object = $(this).position().top + $(this).outerHeight();
@@ -75,15 +78,15 @@
                     var top_of_window = $(window).scrollTop();
                     /* If the object is completely visible in the window, fade it it */
 
-                    if( (bottom_of_window > bottom_of_object) && ($(this).css("opacity")=="0")){       
-                       $(this).animate({'opacity':'1'},1500);   
+                    if( (bottom_of_window > bottom_of_object) && ($(this).css("opacity")=="0")){
+                       $(this).animate({'opacity':'1'},1500);
                         console.log("FADE IN");
-                    } 
-                    else if ((bottom_of_window < top_of_object) && ($(this).css("opacity")=="1")){
-                        $(this).css({"opacity":"0"});  
-                        console.log("FADDE OUT"); 
                     }
-                }); 
+                    else if ((bottom_of_window < top_of_object) && ($(this).css("opacity")=="1")){
+                        $(this).css({"opacity":"0"});
+                        console.log("FADDE OUT");
+                    }
+                });
             });
         });
     </script>
@@ -121,8 +124,14 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button class="dropbtn"
-                            onclick="location.href='designprocess.html'">MODELING</button>
+                        <button class="dropbtn">PRODUCT DEVELOPMENT</button>
+                            <div class="dropdown-content human-dropdown-content">
+                                <a href="modeling.html">MODELING</a>
+                                <a href="design_process.html">DESIGN PROCESS</a>
+                                <a href="hardware.html">HARDWARE</a>
+                                <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                                <a href="implementation.html">IMPLEMENTATION</a>
+                            </div>
                     </div>
                     <div class="dropdown">
                         <button class="dropbtn">TOOLKIT</button>
@@ -137,23 +146,20 @@
                                     <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
                                 </div>
                                 <div class="nav-second-col">
-                                    <li class="pd-list-title"><b>DESIGN</b></li>
-                                    <li><a href="design_process.html">DESIGN PROCESS</a></li>
-                                </div>
-                                <div class="nav-third-col">
-                                    <li class="doc-list-title"><b>DOCUMENTATION</b></li>
+                                    <li class="pd-list-title"><b>DOCUMENTATION</b></li>
                                     <li><a href="notebook.html">NOTEBOOK</a></li>
                                     <li><a href="safety.html">SAFETY</a></li>
+                                    <li><a href="contribution.html">CONTRIBUTION</a></li>
                                 </div>
                             </ul>
                         </div>
                     </div>
                     <div class="dropdown">
                         <button class="dropbtn"
-                            onclick="location.href='about.html'">ABOUT</button>
+                            onclick="location.href='description.html'">DESCRIPTION</button>
                     </div>
                     <div class="dropdown">
-                        <button class="dropbtn"
+                        <button class="dropbtn active-nav"
                             onclick="location.href='index.html'">HOME</button>
                     </div>
                 </div>
@@ -177,11 +183,11 @@
 
         <!----------------------- GRAPHICS START ----------------------->
 
-        <div class="container"> 
+        <div class="container">
 
             <div class="graphic-container">
                 <div class="graphic">
-                    <img src="images/placeholder.jpg">                    
+                    <img src="images/placeholder.jpg">
                 </div>
                 <div class="graphic-text">
                     <p>A common existing form of treatment is chemotherapy. Chemotherapy works by targeting fast-growing cells within the body. However, since chemotherapy is administered intravenously, it may be ineffective on tumors that lack vasculature.
@@ -195,30 +201,30 @@
 
             <div class="graphic-container">
                 <div class="graphic">
-                    <img src="images/placeholder.jpg">                    
+                    <img src="images/placeholder.jpg">
                 </div>
                 <div class="graphic-text">
-                    <p>After a doctor identifies a tumor and gives a diagnosis of breast cancer, he or she can use Lumicure’s bacterial therapy system, Trichotherapy. Genetically modified E. coli are injected into the site of the tumor and then grow specifically in cancer cells through immune selection. 
+                    <p>After a doctor identifies a tumor and gives a diagnosis of breast cancer, he or she can use Lumicure’s bacterial therapy system, Trichotherapy. Genetically modified E. coli are injected into the site of the tumor and then grow specifically in cancer cells through immune selection.
                     </p>
                 </div>
             </div>
 
             <div class="graphic-container">
                 <div class="graphic">
-                    <img style="float: right" src="images/placeholder.jpg">                    
+                    <img style="float: right" src="images/placeholder.jpg">
                 </div>
                 <div style="float:left" class="graphic-text">
-                    <p>The bacteria then constantly produce the therapeutic trichosanthin, which then weakens and destroys cancer cells. The bacterial presence may also recruit components of the immune system into the tumor, assisting in the destruction of cancer cells. An included safety switch prevents the spread of bacteria into healthy tissue. 
+                    <p>The bacteria then constantly produce the therapeutic trichosanthin, which then weakens and destroys cancer cells. The bacterial presence may also recruit components of the immune system into the tumor, assisting in the destruction of cancer cells. An included safety switch prevents the spread of bacteria into healthy tissue.
                     </p>
                 </div>
             </div>
 
             <div class="graphic-container">
                 <div class="graphic">
-                    <img src="images/placeholder.jpg">                    
+                    <img src="images/placeholder.jpg">
                 </div>
                 <div class="graphic-text">
-                    <p>The patient can then monitor the primary tumor through Trichoscan: a self-operated fluorescent imaging device which detects a signal from a fluorescent protein produced by the bacteria known as mCardinal. The patient is also able to locate metastases elsewhere in the body. 
+                    <p>The patient can then monitor the primary tumor through Trichoscan: a self-operated fluorescent imaging device which detects a signal from a fluorescent protein produced by the bacteria known as mCardinal. The patient is also able to locate metastases elsewhere in the body.
                     </p>
                 </div>
             </div>
@@ -229,7 +235,7 @@
         </div>
 
 
-        
+
 
         <!----------------------- GRAPHICS END ------------------------->
 
