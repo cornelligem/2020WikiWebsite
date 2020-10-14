@@ -47,7 +47,7 @@ nav {
     padding-top: 30px;
     /* padding-bottom: 30px; */
     padding-right: 100px;
-    background-color: #5B0005;
+    background-color: #161616;
     height: 98px;
 }
 
@@ -56,7 +56,7 @@ nav {
     display: inline-block;
     float: left;
     margin-left: 80px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .nav-bar-logo img {
@@ -65,7 +65,7 @@ nav {
 
 .home-banner-wrapper {
     position: relative;
-    background: #5B0005;
+    background: #161616;
     height: 675px;
     width: 100%;
     margin-top: -5px;
@@ -112,7 +112,7 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #016c64;
+    background-color: #540B0E;
     color: #ffffff;
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -120,11 +120,11 @@ nav {
 }
 
 .dropdown-content a:hover {
-    background-color: #a0e0bd !important;
+    background-color: #9E2A2B !important;
 }
 
 .toolkit-dropdown-content {
-    width: 590px;
+    width: 500px;
     left: -160px;
 }
 
@@ -159,6 +159,7 @@ nav {
     padding-top: 12px;
     padding-left: 16px;
     padding-bottom: 14px;
+    text-decoration: underline;
 }
 
 .nav-second-col {
@@ -175,9 +176,12 @@ nav {
     transition-duration: 0.5s;
 }
 
+.active-nav {
+  color: #E89E2B;
+}
+
 .dropdown-content a:hover {
-    color: #016c64;
-    background-color: #ffffff;
+    color: #ffffff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -654,6 +658,14 @@ p.team-page-content-text {
 
 /******************** ATTRIBUTIONS PAGE END ********************/
 
+/******************** DEMONSTRATIONS PAGE START ********************/
+.standard-page-content-text img{
+    width: 600px;
+    height: 400px; 
+    display: block; 
+    margin: auto; 
+}
+/******************** DEMONSTRATIONS PAGE END ***********************/
 
 /******************** ENTREPRENEURSHIP PAGE START ********************/
 

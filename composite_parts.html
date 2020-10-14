@@ -40,7 +40,7 @@
        }
 
    </style>
-    <title>Team:Cornell - 2019.igem.org</title>
+    <title>Team:Cornell - 2020.igem.org</title>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" type="text/css" href="styles/grids.css">
@@ -49,107 +49,84 @@
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
     <script>
-        $(document).ready(function() {
-            console.log("SCROLL");
-            /* Every time the window is scrolled ... */
-            /*$('.graphic-container').each( function(i){
-                $(this).animate({'opacity':'1'},1500);
-            }); */
-            $('body').scroll( function(){
-                console.log("SCROOLL");
-                /* Check the location of each desired element */
-                $('.graphic-container').each( function(i){
-                    var top_of_object = $(this).position().top;
-                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-                    var top_of_window = $(window).scrollTop();
-                    /* If the object is completely visible in the window, fade it it */
-
-                    if( (bottom_of_window > bottom_of_object) && ($(this).css("opacity")=="0")){
-                       $(this).animate({'opacity':'1'},1500);
-                        console.log("FADE IN");
-                    }
-                    else if ((bottom_of_window < top_of_object) && ($(this).css("opacity")=="1")){
-                        $(this).css({"opacity":"0"});
-                        console.log("FADDE OUT");
-                    }
-                });
-            });
-        });
+ 
     </script>
 
 </head>
 <!--NOTE: REMEMBER TO CHANCE active-page CLASS TO CORRECT DROPDOWN-->
 <body>
     <div class ="standard-page-wrapper">
-        <!------------------------ NAV BAR START ------------------------>
-        <nav>
-            <div class="nav-bar-wrapper">
-                <div class="nav-bar-main-menu">
-                  <a href="http://2019.igem.org/Team:Cornell"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
-                    <div class="dropdown">
-                        <button class="dropbtn">TEAM</button>
-                        <div class="dropdown-content team-dropdown-content">
-                            <a href="bios.html">BIOS</a>
-                            <a href="sponsors.html">SPONSORS</a>
-                            <a href="attributions.html">ATTRIBUTIONS</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn">OUTREACH</button>
-                        <div class="dropdown-content outreach-dropdown-content">
-                            <a href="https://2019.igem.org/Team:Cornell/EducationAndEngagement">EDUCATION & ENGAGEMENT</a>
-                            <a href="https://2019.igem.org/Team:Cornell/Collaborations">COLLABORATIONS</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn">HUMAN PRACTICES</button>
-                        <div class="dropdown-content human-dropdown-content">
-                            <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
-                            <a href="policies.html">POLICIES</a>
-                            <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn"
-                            onclick="location.href='designprocess.html'">MODELING</button>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn">TOOLKIT</button>
-                        <div class="dropdown-content toolkit-dropdown-content">
-                            <ul>
-                                <div class="nav-first-col">
-                                    <li class="wet-lab-list-title"><b>WET LAB</b></li>
-                                    <li><a href="http://2019.igem.org/Team:Cornell/Foundations">FOUNDATIONS</a></li>
-                                    <li><a href="http://2019.igem.org/Team:Cornell/Demonstrate">DEMONSTRATE</a></li>
-                                    <li><a href="http://2019.igem.org/Team:Cornell/Parts">PARTS</a></li>
-                                    <li><a href="http://2019.igem.org/Team:Cornell/BasicParts">BASIC PARTS</a></li>
-                                    <li><a href="http://2019.igem.org/Team:Cornell/CompositeParts">COMPOSITE PARTS</a></li>
-                                </div>
-                                <div class="nav-second-col">
-                                    <li class="pd-list-title"><b>DESIGN</b></li>
-                                    <li><a href="http://2019.igem.org/Team:Cornell/DesignProcess">DESIGN PROCESS</a></li>
-                                </div>
-                                <div class="nav-third-col">
-                                    <li class="doc-list-title"><b>DOCUMENTATION</b></li>
-                                    <li><a href="http://2019.igem.org/Team:Cornell/Notebook">NOTEBOOK</a></li>
-                                    <li><a href="http://2019.igem.org/Team:Cornell/Safety">SAFETY</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn"
-                            onclick="location.href='about.html'">ABOUT</button>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn active-page"
-                            onclick="location.href='index.html'">HOME</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!------------------------ NAV BAR END ------------------------>
+      <!------------------------ NAV BAR START ------------------------>
+      <nav>
+          <div class="nav-bar-wrapper">
+              <div class="nav-bar-main-menu">
+                <a href="index.html"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
+                  <div class="dropdown">
+                      <button class="dropbtn">TEAM</button>
+                      <div class="dropdown-content team-dropdown-content">
+                          <a href="bios.html">BIOS</a>
+                          <a href="sponsors.html">SPONSORS</a>
+                          <a href="attributions.html">ATTRIBUTIONS</a>
+                      </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn">OUTREACH</button>
+                      <div class="dropdown-content outreach-dropdown-content">
+                          <a href="education.html">EDUCATION & ENGAGEMENT</a>
+                          <a href="collabs.html">COLLABORATIONS</a>
+                      </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn">HUMAN PRACTICES</button>
+                      <div class="dropdown-content human-dropdown-content">
+                          <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
+                          <a href="policies.html">POLICIES</a>
+                          <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
+                      </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn">PRODUCT DEVELOPMENT</button>
+                          <div class="dropdown-content human-dropdown-content">
+                              <a href="modeling.html">MODELING</a>
+                              <a href="design_process.html">DESIGN PROCESS</a>
+                              <a href="hardware.html">HARDWARE</a>
+                              <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                              <a href="implementation.html">IMPLEMENTATION</a>
+                          </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn">TOOLKIT</button>
+                      <div class="dropdown-content toolkit-dropdown-content">
+                          <ul>
+                              <div class="nav-first-col">
+                                  <li class="wet-lab-list-title"><b>WET LAB</b></li>
+                                  <li><a href="foundation.html">FOUNDATIONS</a></li>
+                                  <li><a href="demonstrate.html">DEMONSTRATE</a></li>
+                                  <li><a href="part.html">PARTS</a></li>
+                                  <li><a href="basic_part.html">BASIC PARTS</a></li>
+                                  <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
+                              </div>
+                              <div class="nav-second-col">
+                                  <li class="pd-list-title"><b>DOCUMENTATION</b></li>
+                                  <li><a href="notebook.html">NOTEBOOK</a></li>
+                                  <li><a href="safety.html">SAFETY</a></li>
+                                  <li><a href="contribution.html">CONTRIBUTION</a></li>
+                              </div>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn"
+                          onclick="location.href='description.html'">DESCRIPTION</button>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn active-nav"
+                          onclick="location.href='index.html'">HOME</button>
+                  </div>
+              </div>
+          </div>
+      </nav>
+      <!------------------------ NAV BAR END ------------------------->
         <!------------------------ STANDARD PAGE BANNER START ------------------------>
         <header class="standard-page-banner">
             <svg viewBox="0 0 100 100" width=100% height=100%>
