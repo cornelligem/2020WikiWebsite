@@ -653,6 +653,14 @@ p.team-page-content-text {
 
 /******************** ATTRIBUTIONS PAGE END ********************/
 
+/******************** DEMONSTRATIONS PAGE START ********************/
+.standard-page-content-text img{
+    width: 600px;
+    height: 400px; 
+    display: block; 
+    margin: auto; 
+}
+/******************** DEMONSTRATIONS PAGE END ***********************/
 
 /******************** ENTREPRENEURSHIP PAGE START ********************/
 
