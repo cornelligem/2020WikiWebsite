@@ -396,6 +396,7 @@ footer {
     padding-right: 15px;
     vertical-align: middle;
     margin-top: 40px;
+
 }
 
 .standard-page-side-bar>li {
@@ -408,8 +409,8 @@ footer {
     position: relative;
 }
 
-.green-accent-line-left {
-    border: #a0e0bd solid 1px;
+.yellow-accent-line-left {
+    border: #E89E2B solid 1px;
     display: block;
     float: left;
     margin: 1em auto 1em auto;
