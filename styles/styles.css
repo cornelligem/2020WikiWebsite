@@ -1,10 +1,6 @@
 /******************** ALL FONTS START ********************/
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@font-face {
-    font-family: 'Futura';
-    src: url('../futura/futura\ medium\ bt.ttf');
-}
 
 body {
     font-family: 'PT Serif', serif;
@@ -20,7 +16,7 @@ body {
 }
 
 .tile-title {
-    font-family: 'Futura', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 /******************** ALL FONTS END ********************/
@@ -60,14 +56,6 @@ nav {
 
 .nav-bar-logo img {
     width: 140px;
-}
-
-.home-banner-wrapper {
-    position: relative;
-    background: #161616;
-    height: 675px;
-    width: 100%;
-    margin-top: -5px;
 }
 
 .dropbtn {
@@ -187,6 +175,10 @@ nav {
     display: block;
 }
 
+.standard-page-banner {
+  width: 100%;
+}
+
 footer {
     padding: 35px;
     width: 100%;
@@ -267,72 +259,27 @@ footer {
 
 /******************** HOME PAGE START ********************/
 
-.home-description-wrapper {
-    margin-top: 120px;
-}
-
-.home-description-logo {
-    width: 40%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 80px;
-}
-
-.home-description {
-    color: #000;
-    font-size: 20px;
-    margin-bottom: 80px;
-    text-align: center;
-}
-
-.tiles-wrapper {
-    background-color: #e1e9e7;
-}
-
-.tiles-wrapper img {
-    width: 90%;
-    border-radius: 50%;
-    display: block;
-    margin: 15px auto 15px auto;
-}
-
-.tile-wrapper {
+.home-banner-wrapper {
     position: relative;
-}
-
-.tile-title {
-    /* font-family: 'Asap Condensed', sans-serif; */
-    font-size: 30px;
-    color: rgb(30, 30, 30);
-    text-align: center;
-    margin-top: 45%;
-}
-
-.pp-title {
-    margin-top: 40%;
-}
-
-.overlay {
-    background-color: transparent;
-    z-index: 512;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background: #161616;
+    height: 675px;
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    margin-top: -5px;
 }
 
-.overlay:hover {
-    background-color: #e1e9e7;
-    opacity: 0.6;
+.home-banner img {
+  width: 100%;
+  margin-top: 1px;
 }
 
-.wrapper-space {
-    background-color: #e1e9e6;
+.text {
+  font-family: 'PT Serif';
+  font-size: 24px;
+}
+
+.graphic-text {
+  font-family: 'PT Serif';
+  font-size: 24px;
 }
 
 .text{
@@ -341,6 +288,13 @@ footer {
     margin-right: 200px;
     margin-top: 100px;
     margin-bottom: 100px;
+}
+
+.containertext {
+  text-align: center;
+  margin: 0px;
+  font-family: 'PT Serif';
+  font-size: 24px;
 }
 
 .graphic-container{
@@ -355,7 +309,7 @@ footer {
 }
 
 .graphic img{
-    width: 30%;
+    width: 35%;
     float: left;
 }
 
@@ -366,6 +320,13 @@ footer {
     padding-bottom: 50px;
 }
 
+.hometrichotherapy {
+  padding-right: 30px;
+}
+
+.homedoctor {
+  padding-left: 30px;
+}
 
 /******************** HOME PAGE END ********************/
 
@@ -663,7 +624,7 @@ p.team-page-content-text {
     height: 400px;
     display: block;
     margin: auto;
-    margin-top: 80px; 
+    margin-top: 80px;
 }
 /******************** DEMONSTRATIONS PAGE END ***********************/
 
