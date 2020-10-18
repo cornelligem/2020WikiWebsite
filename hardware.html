@@ -47,10 +47,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
     <script>
-
-    </script>
+        $(document).ready(function() {
+            $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
+            $('body').scroll( function(){
+                /* Check the location of each desired element */
+               $('.standard-page-side-bar-content-wrapper').each( function(i){
+                    var top_of_object = $(this).position().top;
+                    var top_of_window = $(window).scrollTop();
+                    /* If the object is completely visible in the window, fade it it */
+                    if( (top_of_window > top_of_object)){
+                        console.log("HELLO");
+                       $('.standard-page-side-bar-wrapper').css({'position':'fixed', 'display':'block'});
+                    }
+                    if ((top_of_window < top_of_object)){
+                        $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
+                    }
+                });
+            });
+        });
+    </script> 
 
 </head>
 <!--NOTE: REMEMBER TO CHANCE active-page CLASS TO CORRECT DROPDOWN-->
@@ -85,12 +101,11 @@
                       </div>
                   </div>
                   <div class="dropdown">
-                      <button class="dropbtn">PRODUCT DEVELOPMENT</button>
+                      <button class="dropbtn active-page">PRODUCT DEVELOPMENT</button>
                           <div class="dropdown-content human-dropdown-content">
                               <a href="modeling.html">MODELING</a>
-                              <a href="design_process.html">DESIGN PROCESS</a>
-                              <a href="hardware.html">HARDWARE</a>
                               <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                              <a href="hardware.html">HARDWARE</a>
                               <a href="implementation.html">IMPLEMENTATION</a>
                           </div>
                   </div>
@@ -120,7 +135,7 @@
                           onclick="location.href='description.html'">DESCRIPTION</button>
                   </div>
                   <div class="dropdown">
-                      <button class="dropbtn active-nav"
+                      <button class="dropbtn"
                           onclick="location.href='index.html'">HOME</button>
                   </div>
               </div>
@@ -129,9 +144,7 @@
       <!------------------------ NAV BAR END ------------------------->
         <!------------------------ STANDARD PAGE BANNER START ------------------------>
         <header class="standard-page-banner">
-            <svg viewBox="0 0 100 100" width=100% height=100%>
-                <text text-anchor="middle" alignment-baseline="middle" x=50% y=50%>HARDWARE</text>
-            </svg>
+            <img class="standard-page-banner" src="images/banners/hardware.png" alt="demonstrate banner">
         </header>
         <!------------------------ STANDARD PAGE BANNER END ------------------------>
         <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
@@ -154,6 +167,7 @@
             <div class="standard-page-content-wrapper">
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading1">Overview</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         We consolidated various engineering technologies and principles in designing the hardware components of our project. Starting by consulting researchers and scientific papers, we learned methods that could optimize  and improve our prototype. We aimed to develop an integrated system that makes it simple to use for our entire customer base. Cornell iGEM’s Tricho-scan system combines our biological components with a hardware implementation that ensures we use the full potential of our bacteria.
@@ -167,6 +181,7 @@
                 </div>
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading2">Physical Design</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         Our fluorescent detecting system uses a monochromatic laser for fluorescent excitation. mCardinal’s fluorescence emits only after absorbing red light. Therefore, we chose a laser that would only emit mCardinal’s needed excitation wavelength, thus simplifying cost and unneeded complexity. Tricho-scan’s beam of light would then be filtered by a dichroic mirror. The mirror does not require light distributors and reflects light back to the source, creating an efficient optical path and an interference-blocking filter. The area in which the laser beam would contact the skin is enclosed by a suction cup, a feature chosen to prevent excess light interfering with the fluorescent reading. Tricho-scan also features a Raspberry pi and a corresponding Raspberry Pi camera module as the detector. This unit is placed by the monochromatic laser. Regarding the light pathway, if the light is the correct wavelength to excite mCardinal, it will be reflected towards the skin. Light coming from the skin will only pass through to the mirror if it is wavelengths in the emission spectrum of mCardinal. Otherwise, light will be reflected back to the light source. 
@@ -181,6 +196,8 @@
                 </div>
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading3">Modeling</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         After applying engineering techniques in the design of our hardware, Tricho-scan, we wanted to test the integration of the hardware with biological aspects of our project. However, we faced physical restrictions due to COVID-19. Therefore, instead of physically building our fluorescent reader, Cornell iGEM instead aimed to model one of Tricho-scan’s most important aspects—its maximum readable depth. We started by examining various research papers about topics such as the skin’s properties with regard to light or the effect of the beam wavelength and width.
                     </p>
@@ -193,11 +210,11 @@
                       </p>
                       <p class="standard-page-content-text">
                         Our approach to determining the maximum readable depth relied on the relationship between the coefficients and weight as well as Beer Lambert’s Law. Equations and calculations were performed in MATLAB. From the absorption and scattering coefficients from each skin layer, we acknowledged the change in weight with the following formula [4]: 
-                        <img src="images/hardware/modeling/image13.png" style="">
+                        <img src="images/hardware/modeling/image13.png" style ="width: 500px; height: 200px;">
                         Here, ΔW is the change in weight at a ‘collision’ with a tissue particle and μ is the absorption/scattering coefficient respectively. The paper we found this in also lists a max penetration depth given that light particles in their simulation disappear when they are 1/100 of their initial weight. We used this max depth and 1/100 fraction, as well as a μaμa+μsfraction from each layer’s coefficients weighted by layer depth, in order to find a theoretical particle collision density. 
-                        <img src="images/hardware/modeling/equation.PNG">
+                        <img src="images/hardware/modeling/equation.PNG" style ="width: 700px; height: 300px;">
                         We then used this particle collision density to find how many collisions would occur for a certain depth into the skin and utilized the weighted equation above (ΔW) to find the fraction of our incident light that will reach each depth. Multiplying this fraction by our incident power of light gives the power of light at each depth. 
-                        <img src="images/hardware/modeling/equation2.PNG">
+                        <img src="images/hardware/modeling/equation2.PNG" style ="width: 700px; height: 300px;">
                     </p>
                       <p class="standard-page-content-text">
                         Following this, we used the ΔW formula again to find the power at the surface of the skin. If this is above the minimum power of light detectable by the human eye, 3.58*10^(-18) W [6], then we counted this as a readable depth.
@@ -211,6 +228,7 @@
                 </div>
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading4">Code</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         We created Matlab scripts with the goal of determining the maximum readable depth of our Tricho-scan system, as well as how different factors such as skin tone would affect this depth. 
@@ -224,10 +242,11 @@
                 </div>
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading5">Results</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         Using the parameters, equations, and methods previously described, we modeled the light penetration through the first 5 skin layers. For this calculation, we used the values below:
-                        <img src="images/hardware/results/constants.PNG">
+                        <img src="images/hardware/results/constants.PNG" style ="width: 700px; height: 350px;">
                         Our model allowed us to estimate our maximum readable depth to be 20.0723mm. This indicates that our scanner would be able to penetrate through to the deepest layer of skin that we modeled, the subcutaneous adipose tissue, which spans 2.1mm to 5.1mm in the skin. While a maximum readable depth of 20.0723mm would not necessarily allow Tricho-scan to cover the range of tissue where breast cancer tumors could appear, factors such as scanning in a light-sealed environment could increase accuracy of readings at larger depths. This is due to both less interference from external light sources and because the minimum readable light intensity would be at a lower threshold. Such evidence suggests that our Tricho-scan system has potential for improvement in terms of maximum readable depth.
                     </p>
                     <p class="standard-page-content-text">
@@ -252,6 +271,7 @@
                 </div>
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading6">Shortfalls</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         Our modeling is based on several assumptions that could lead to slightly inaccurate results. Although we took scattering and absorption coefficients found from research, as explained previously, we then weighted them by the depth of each layer and used them to find a theoretical average particle collision density using max penetration depth equations from research papers (also explained previously). By doing this, we assumed that the coefficients are consistent throughout each individual layer, that we could estimate by assuming our theoretical particle collision density is constant, and that we could then extrapolate this same collision density deeper into the skin. Clearly, skin is not uniform and layers vary significantly, so weighting layers by depth and then extrapolating that deeper most likely does not give a completely accurate result of reading at deep layers. 
@@ -265,6 +285,7 @@
                 </div>
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading7">Testing</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         We would simulate human skin with a square cut of shaved pork belly, and inject our cells into the tissue at various depths.  We calculate the average bacteria cell count per tumor to be 4.64x10 11 bacteria, or 441 mg wet weight of bacteria, based on estimated cell and tumor size and density [8]. 
@@ -282,6 +303,7 @@
                 </div>
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading8">Sources</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         [1] (2018, March 30). Penetration Depth Guide For Biosensor Applications. Retrieved from https://www.maximintegrated.com/en/design/technical-documents/app-notes/6/6433.html
