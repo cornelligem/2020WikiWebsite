@@ -21,11 +21,6 @@
             margin-left: 0px ;
         }
 
-        /* removes default styling for home banner tagline */
-        #HQ_page p {
-            font-family: 'Opens Sans', sans-serif;
-        }
-
         /* removes small extra margin at very bottom below footer */
         p {
             margin: 0;
@@ -41,6 +36,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" type="text/css" href="styles/grids.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -127,9 +123,8 @@
                         <button class="dropbtn">PRODUCT DEVELOPMENT</button>
                             <div class="dropdown-content human-dropdown-content">
                                 <a href="modeling.html">MODELING</a>
-                                <a href="design_process.html">DESIGN PROCESS</a>
-                                <a href="hardware.html">HARDWARE</a>
                                 <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                                <a href="hardware.html">HARDWARE</a>
                                 <a href="implementation.html">IMPLEMENTATION</a>
                             </div>
                     </div>
@@ -169,15 +164,15 @@
 
         <!------------------------ BANNER START ------------------------>
 
-        <div class="home-banner-wrapper">
-            <div class="banner-container">
+        <div class="home-banner">
+            <img src="images/banners/home-01.png" alt="home banner">
             </div>
         </div>
         <!------------------------ BANNER END -------------------------->
 
         <!------------------------ TEXT START -------------------------->
         <div class="text">
-            The American Cancer Society estimates that about 276,000 women will be diagnosed with new cases of invasive breast cancer in 2020. One in eight women are expected to develop breast cancer at some point in their lives.
+            The <b>American Cancer Society</b> estimates that about <b>276,000 women</b> will be diagnosed with new cases of invasive breast cancer in 2020. <b>One in eight</b> women are expected to develop breast cancer at some point in their lives.
         </div>
         <!------------------------ TEXT END ---------------------------->
 
@@ -187,76 +182,99 @@
 
             <div class="graphic-container">
                 <div class="graphic">
-                    <img src="images/placeholder.jpg">
-                </div>
-                <div class="graphic-text">
-                    <p>A common existing form of treatment is chemotherapy. Chemotherapy works by targeting fast-growing cells within the body. However, since chemotherapy is administered intravenously, it may be ineffective on tumors that lack vasculature.
-                    </p>
-                </div>
-            </div>
-
-            <div class="text">
-                The American Cancer Society estimates that about 276,000 women will be diagnosed with new cases of invasive breast cancer in 2020. One in eight women are expected to develop breast cancer at some point in their lives.
-            </div>
-
-            <div class="graphic-container">
-                <div class="graphic">
-                    <img src="images/placeholder.jpg">
-                </div>
-                <div class="graphic-text">
-                    <p>After a doctor identifies a tumor and gives a diagnosis of breast cancer, he or she can use Lumicure’s bacterial therapy system, Trichotherapy. Genetically modified E. coli are injected into the site of the tumor and then grow specifically in cancer cells through immune selection.
-                    </p>
-                </div>
-            </div>
-
-            <div class="graphic-container">
-                <div class="graphic">
-                    <img style="float: right" src="images/placeholder.jpg">
+                    <img style="float:right" src="images/chemo.png">
                 </div>
                 <div style="float:left" class="graphic-text">
-                    <p>The bacteria then constantly produce the therapeutic trichosanthin, which then weakens and destroys cancer cells. The bacterial presence may also recruit components of the immune system into the tumor, assisting in the destruction of cancer cells. An included safety switch prevents the spread of bacteria into healthy tissue.
+                    <p>A common existing form of treatment is chemotherapy.
+                      Chemotherapy works by targeting fast-growing cells within the
+                      body. However, since chemotherapy is administered intravenously,
+                      it may be ineffective on tumors that lack vasculature.
+                    </p>
+                </div>
+            </div>
+<br>
+<br>
+<br>
+<br>
+            <div class="text containertext">
+                So what can we do? We’re <b>Cornell iGEM</b> and this is
+                 <b>Lumicure</b>. Lumicure combines <b>bacterial therapy</b> and
+                  an <b>imaging device</b> to detect, monitor, and mitigate breast cancer.             </div>
+                  <br>
+                  <br>
+            <div class="graphic-container">
+                <div class="graphic">
+                    <img src="images/docpatient.png">
+                </div>
+                <div class="graphic-text homedoctor">
+                  <br>
+                  <br>
+                  <br>
+                    <p>After a doctor identifies a tumor and gives a diagnosis of breast
+                      cancer, he or she can use Lumicure’s bacterial therapy system,
+                      Trichotherapy. Genetically modified E. coli are injected into the
+                      site of the tumor and then grow specifically in cancer cells through immune selection.
                     </p>
                 </div>
             </div>
 
             <div class="graphic-container">
                 <div class="graphic">
-                    <img src="images/placeholder.jpg">
+                    <video width="420" autoplay loop muted style="float: right">
+                      <source src="images/trichotherapy.mp4" type="video/mp4">
+                      </video>
                 </div>
-                <div class="graphic-text">
-                    <p>The patient can then monitor the primary tumor through Trichoscan: a self-operated fluorescent imaging device which detects a signal from a fluorescent protein produced by the bacteria known as mCardinal. The patient is also able to locate metastases elsewhere in the body.
+                <div style="float:left" class="graphic-text hometrichotherapy">
+                    <p>The bacteria then constantly produce the therapeutic trichosanthin,
+                      which then weakens and destroys cancer cells. The bacterial presence may
+                      also recruit components of the immune system into the tumor, assisting in the
+                      destruction of cancer cells. An included safety switch prevents the spread of bacteria
+                      into healthy tissue.
                     </p>
                 </div>
             </div>
 
-            <div class="text">
-                The American Cancer Society estimates that about 276,000 women will be diagnosed with new cases of invasive breast cancer in 2020. One in eight women are expected to develop breast cancer at some point in their lives.
-            </div>
-        </div>
-
-
-
-
-        <!----------------------- GRAPHICS END ------------------------->
-
-        <!------------------------ FOOTER START ------------------------>
-        <footer>
-            <div class="footer-wrapper">
-                <div class="icon-wrapper">
-                    <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
+            <div class="graphic-container">
+                <div class="graphic">
+                    <img src="images/trichoscan.png">
                 </div>
-                <div class="icon-wrapper">
-                    <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
-                </div>
-                <div class="icon-wrapper icon-wrapper-last">
-                    <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
+                <div class="graphic-text">
+                    <p>The patient can then monitor the primary tumor through Trichoscan: a self-operated
+                      fluorescent imaging device which detects a signal from a fluorescent protein produced
+                      by the bacteria known as mCardinal. The patient is also able to locate metastases
+                      elsewhere in the body.
+                    </p>
                 </div>
             </div>
-        </footer>
-        <!------------------------ FOOTER END ------------------------>
-    </div>
-</body>
+
+            <div class="text containertext">
+              With <b>Lumicure</b>, we hope to provide an innovative, viable framework for developing potential
+              treatments for breast cancer and other forms of cancer in the future.            </div></div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <!------------------------ FOOTER START ------------------------>
+                   <footer>
+                       <div class="footer-wrapper">
+                           <div class="icon-wrapper">
+                               <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
+                           </div>
+                           <div class="icon-wrapper">
+                               <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
+                           </div>
+                           <div class="icon-wrapper">
+                               <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
+                           </div>
+                           <div class="icon-wrapper icon-wrapper-last">
+                               <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
+                           </div>
+                       </div>
+                   </footer>
+                   <!------------------------ FOOTER END ------------------------>
+               </div>
+           </body>
 </html>

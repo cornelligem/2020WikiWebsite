@@ -1,0 +1,262 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+        /* hides "Team:Cornell" and iGEM logo */
+        #top_title {
+            display: none;
+        }
+
+        /* removes padding below footer */
+        #globalWrapper {
+            padding: 0;
+        }
+
+        #content {
+            padding: 0px;
+            width: 100% !important;
+            margin-top: 0px;
+            margin-left: 0px ;
+        }
+
+        /* removes default styling for home banner tagline */
+        #HQ_page p {
+            font-family: 'Opens Sans', sans-serif;
+        }
+
+        /* removes small extra margin at very bottom below footer */
+        p {
+            margin: 0;
+        }
+
+        /* removes bullets from Toolkit dropdown menu */
+        ul {
+            list-style-image: none;
+        }
+
+    </style>
+    <title>Team:Cornell - 2020.igem.org</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/grids.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
+            $('body').scroll( function(){
+                /* Check the location of each desired element */
+            $('.standard-page-side-bar-content-wrapper').each( function(i){
+                    var top_of_object = $(this).position().top;
+                    var top_of_window = $(window).scrollTop();
+                    /* If the object is completely visible in the window, fade it it */
+                    if( (top_of_window > top_of_object)){
+                        console.log("HELLO");
+                    $('.standard-page-side-bar-wrapper').css({'position':'fixed', 'display':'block'});
+                    }
+                    if ((top_of_window < top_of_object)){
+                        $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class = "standard-page-wrapper">
+        <!------------------------ NAV BAR START ------------------------>
+        <nav>
+            <div class="nav-bar-wrapper">
+                <div class="nav-bar-main-menu">
+                  <a href="index.html"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
+                    <div class="dropdown">
+                        <button class="dropbtn">TEAM</button>
+                        <div class="dropdown-content team-dropdown-content">
+                            <a href="bios.html">BIOS</a>
+                            <a href="sponsors.html">SPONSORS</a>
+                            <a href="attributions.html">ATTRIBUTIONS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">OUTREACH</button>
+                        <div class="dropdown-content outreach-dropdown-content">
+                            <a href="education.html">EDUCATION & ENGAGEMENT</a>
+                            <a href="collabs.html">COLLABORATIONS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">HUMAN PRACTICES</button>
+                        <div class="dropdown-content human-dropdown-content">
+                            <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
+                            <a href="policies.html">POLICIES</a>
+                            <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn active-nav">PRODUCT DEVELOPMENT</button>
+                            <div class="dropdown-content human-dropdown-content">
+                                <a href="modeling.html">MODELING</a>
+                                <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                                <a href="hardware.html">HARDWARE</a>
+                                <a href="implementation.html">IMPLEMENTATION</a>
+                            </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">TOOLKIT</button>
+                        <div class="dropdown-content toolkit-dropdown-content">
+                            <ul>
+                                <div class="nav-first-col">
+                                    <li class="wet-lab-list-title"><b>WET LAB</b></li>
+                                    <li><a href="foundation.html">FOUNDATIONS</a></li>
+                                    <li><a href="demonstrate.html">DEMONSTRATE</a></li>
+                                    <li><a href="part.html">PARTS</a></li>
+                                    <li><a href="basic_part.html">BASIC PARTS</a></li>
+                                    <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
+                                </div>
+                                <div class="nav-second-col">
+                                    <li class="pd-list-title"><b>DOCUMENTATION</b></li>
+                                    <li><a href="notebook.html">NOTEBOOK</a></li>
+                                    <li><a href="safety.html">SAFETY</a></li>
+                                    <li><a href="contribution.html">CONTRIBUTION</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn"
+                            onclick="location.href='description.html'">DESCRIPTION</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn"
+                            onclick="location.href='index.html'">HOME</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!------------------------ NAV BAR END ------------------------->
+
+        <!------------------------ STANDARD PAGE BANNER START ------------------------>
+        <header class="standard-page-banner">
+          <img class="standard-page-banner" src="images/banners/engineeringsuccess.png" alt="engineering success banner">
+        </header>
+        <!------------------------ STANDARD PAGE BANNER END ------------------------>
+
+        <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
+        <div class="standard-page-side-bar-content-wrapper">
+            <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
+            <div class="standard-page-side-bar-wrapper">
+                <ul class="standard-page-side-bar">
+                    <li><a href="#pageheading1">IDEATION</a></li>
+                    <li><a href="#pageheading2">DESIGN PROCESS</a></li>
+                    <li><a href="#pageheading3">IMPLEMENTATION</a></li>
+                    <li><a href="#pageheading4">SOURCES</a></li>
+                </ul>
+            </div>
+            <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
+            <!------------------------ STANDARD PAGE CONTENT START ------------------------>
+            <div class="standard-page-content-wrapper">
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading1">IDEATION</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                      Not only did our team create a cancer therapeutic, but we also wanted to design a monitoring system. Our team began by proposing a self-scanner, as this would be a convenient and easy-to-use approach. We were unsure how to actually create this, so started by researching existing technologies that can be used for imaging. We found many bioluminescence readers already in use to track gene expression and disease progression [1]. We found that bioluminescence is typically seen as more accurate than fluorescence when it can be measured properly because it eliminates the possibility of intervening autofluorescent tissue signals [2]. From here, we started to consider the actual reader construction and noticed bioluminescence would also be superior to fluorescence from a design perspective because we would not need a light source to excite the particles, nor would we need specific wavelength filters that add significantly to cost.
+
+                    </p>
+                    <img class="standard-page-content-image" src="">
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading2">DESIGN PROCESS</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                      Although this was a good starting point, as we began to research how to actually implement this design, we ran into one main problem. We found that most of the systems in use are pretty large structures that fit the entire animal body (usually a mouse) inside the reader in order to make sure zero outside light can interfere with the reading [1]. Others are similarly “light-tight” even if the entire body does not fit inside. Trying to have no outside light and reading with a low grade camera would be a difficult feat, so we began to research alternatives to bioluminescence.
+<br><br>
+From this point, we saw that some of the bioluminescent readers also read fluorescence, so we researched whether that would be a better way to accomplish our goal. We found many more low-cost fluorescent readers created by various researchers [3,4]. Multiple of these also included open-source software that we could use as a reference [3,4]. With fluorescence, we would not need to be as worried about excess light getting in. We could excite the fluorophores using specific frequencies as well as read specific frequencies. We discussed with our wetlab subteam to determine what would be possible and looked at various fluorescent markers. We found comparable values in papers and decided there would be significantly high enough mCardinal presence to be feasibly detected, so we pursued a fluorescence-based reader design.
+
+
+                    </p>
+                    <img class="standard-page-content-image" src="">
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading3">IMPLEMENTATION</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+
+                      Weighing pros and cons of various types of structures and features for our reader, we decided that using a Raspberry Pi camera with mCardinal specific wavelength emission and excitation filters, as well as a dichroic mirror would be ideal. We chose this idea because we essentially needed to copy over the design of a fluorescent microscope without the magnification. From here, we then created a CAD of what the reader would look like and found parts to order (raspberry pi + camera, mirror/filter block, light source, ABS plastic to 3D print). Because of COVID-19, we did not build the reader, but instead used mathematical modeling to predict what depth we could read at and answer various other questions that arose.
+<br><br>
+                      The modeling for our reader can be found under hardware: (LINK TO MODELING)
+<br><br>
+                      After creating the model, we used it to try to optimize our design. Specifically, the power graphs (LINK TO FINDINGS) helped us pick a light intensity for deep reading depth that is still safe for human skin.
+<br><br>
+                      When we actually build the reader, the basic testing we will do can be found under hardware: (LINK TO TESTING)
+<br><br>
+                      After basic testing, we can use this data (such as max reading depth and intensity at each depth) to help improve the accuracy of our model. From here, we could then use our model to change other variables and predict what will improve reading depth. This testing process above will then be repeated to test various other factors in order to optimize our design. We hope to test the efficacy of emission and excitation filters in order to see whether the readable depth increases or decreases in their presence. In addition, we discussed polarization of light, diameter of reading tube, and use of magnifying lenses as other variables to try. We will conduct thorough research on every aspect we intend to experiment with and incorporate it into our model to predict outcomes prior to actually rebuilding the reader, incorporating them, and retesting.
+<br><br>
+                      Following this design process cycle, we preserve as many resources as possible by only building and testing after researching, designing, and modeling. All of our steps also build on each other such as the testing improving the modeling. Through this cycle, we believe we can create the best product possible. If there are any unexpected results in testing along the way, we have all of the previous steps to work backwards from. We would first look at the model to see what variables could be causing these results and if it cannot be found there, we will look back to the physical design limitations. If we cannot find the mistake there, we will move back to the research stage to try to learn more about the system before continuing.
+<br><br>
+                      An example of an unexpected result could be that the readable depth is about a quarter of a millimeter lower than predicted. We could look at our model and see what constants went into this prediction that would cause that effect, maybe the 10% loss through the dichroic mirror block (without this in at all, the readable depth is ~0.5mm deeper). Although the part specification gives this value [5], this would cause a slightly-off readable depth (rather than other variables that may change it to more or less extreme effects). We could easily shine light through the block and measure the loss to determine whether this is the cause. If this is the cause, we could fix our model and research more about what kinds of filters/brands let the most light through, given this is clearly an area where there is the potential for free variables. If this is not the cause, we would go through other values in our model, testing those similarly. From here, if we had not found the cause, we would consider other limitations besides variables in our model (is the reader being held at an angle, etc.). If the cause for the unexpected result has still not been identified, we would research other fluorescent readers and atypical tissue interaction to look if other researchers had run into similar findings. One fix could be, as mentioned, the polarization of the light. We might observe that too much light is reflected off of the skin, or even at the boundary between different layers in the skin that have different absorptive indices and scattering coefficients. Excessive reflection would lower our readable depth. Because we can polarize our laser light, we can reduce this reflection based on research into skin brewster angles [6]. After researching this and determining what has been optimal in other experiments, we could then move back to our model and try incorporating this to see whether our model now matches our tests. If this is the case, we would use our research to determine the optimal polarization, edit our design, and run through testing again. If it is still not the cause, we would continue to research. When we eventually find what is causing this result, we will move back to our model, learn from our research and unexpected outcome, and continue to optimize our product.
+
+
+      </p>
+                    <img class="standard-page-content-image" src="">
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading4">SOURCES</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                      [1] IVIS Instrument, Spectrum, 120V, Andor C-124262|PerkinElmer. (2020). Retrieved 5 October 2020, from https://www.perkinelmer.com/product/ivis-spectrum-imaging-system-120v-124262
+<br><br>
+  [2] John, S., Rolnick, K., Wilson, L. et al. Bioluminescence for in vivo detection of cell-type-specific inflammation in a mouse model of uveitis. Sci Rep 10, 11377 (2020). https://doi.org/10.1038/s41598-020-68227-4
+<br><br>
+  [3] Maia Chagas, A., Prieto-Godino, L. L., Arrenberg, A. B., & Baden, T. (2017). The €100 lab: A 3D-printable open-source platform for fluorescence microscopy, optogenetics, and accurate temperature control during behaviour of zebrafish, Drosophila, and Caenorhabditis elegans. PLoS biology, 15(7), e2002702. https://doi.org/10.1371/journal.pbio.2002702
+  <br><br>
+  [4] Nuñez I, Matute T, Herrera R, Keymer J, Marzullo T, Rudge T, et al. (2017) Low cost and open source multi-fluorescence imaging system for teaching and research in biology and bioengineering. PLoS ONE 12(11): e0187163. https://doi.org/10.1371/journal.pone.0187163
+  <br><br>
+  [5] 45° Red Dichroic Filter Mounted in C-Mount Cube | Edmund Optics. (2020). Retrieved 18 October 2020, from https://www.edmundoptics.com/p/45deg-red-dichroic-filter-mounted-in-c-mount-cube/10195/
+  <br><br>
+  [6]  Y. Su, W. Wang, K. Xu, and C. Jiang.  The optical properties of skin.  InOptics in Health Careand Biomedical Optics: Diagnostics and Treatment, pages 299–304. SPIE, vol. 4916, 2002
+
+
+      <br>
+      <br>
+
+      </p>
+                    <img class="standard-page-content-image" src="">
+                </div>
+            </div>
+            <!------------------------ STANDARD PAGE CONTENT END ------------------------>
+        </div>
+        <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
+
+
+
+
+        <!------------------------ FOOTER START ------------------------>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="icon-wrapper">
+                    <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
+                </div>
+                <div class="icon-wrapper">
+                    <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
+                </div>
+                <div class="icon-wrapper">
+                    <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
+                </div>
+                <div class="icon-wrapper icon-wrapper-last">
+                    <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
+                </div>
+            </div>
+        </footer>
+        <!------------------------ FOOTER END ------------------------>
+      </div>
+      </body>
+      </html>

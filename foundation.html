@@ -46,10 +46,26 @@
     <link rel="stylesheet" type="text/css" href="styles/grids.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
- 
+        $(document).ready(function() {
+            $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
+            $('body').scroll( function(){
+                /* Check the location of each desired element */
+            $('.standard-page-side-bar-content-wrapper').each( function(i){
+                    var top_of_object = $(this).position().top;
+                    var top_of_window = $(window).scrollTop();
+                    /* If the object is completely visible in the window, fade it it */
+                    if( (top_of_window > top_of_object)){
+                        console.log("HELLO");
+                    $('.standard-page-side-bar-wrapper').css({'position':'fixed', 'display':'block'});
+                    }
+                    if ((top_of_window < top_of_object)){
+                        $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
+                    }
+                });
+            });
+        });
     </script>
 
 </head>
@@ -88,14 +104,13 @@
                       <button class="dropbtn">PRODUCT DEVELOPMENT</button>
                           <div class="dropdown-content human-dropdown-content">
                               <a href="modeling.html">MODELING</a>
-                              <a href="design_process.html">DESIGN PROCESS</a>
-                              <a href="hardware.html">HARDWARE</a>
                               <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                              <a href="hardware.html">HARDWARE</a>
                               <a href="implementation.html">IMPLEMENTATION</a>
                           </div>
                   </div>
                   <div class="dropdown">
-                      <button class="dropbtn">TOOLKIT</button>
+                      <button class="dropbtn active-nav">TOOLKIT</button>
                       <div class="dropdown-content toolkit-dropdown-content">
                           <ul>
                               <div class="nav-first-col">
@@ -120,7 +135,7 @@
                           onclick="location.href='description.html'">DESCRIPTION</button>
                   </div>
                   <div class="dropdown">
-                      <button class="dropbtn active-nav"
+                      <button class="dropbtn"
                           onclick="location.href='index.html'">HOME</button>
                   </div>
               </div>
@@ -129,9 +144,7 @@
       <!------------------------ NAV BAR END ------------------------->
         <!------------------------ STANDARD PAGE BANNER START ------------------------>
         <header class="standard-page-banner">
-            <svg viewBox="0 0 100 100" width=100% height=100%>
-                <text text-anchor="middle" alignment-baseline="middle" x=50% y=50%>FOUNDATIONS</text>
-            </svg>
+          <img class="standard-page-banner" src="images/banners/foundations.png" alt="foundations banner">
         </header>
         <!------------------------ STANDARD PAGE BANNER END ------------------------>
         <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
@@ -139,77 +152,69 @@
             <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
             <div class="standard-page-side-bar-wrapper">
                 <ul class="standard-page-side-bar">
-                    <li><a href="#pageheading1">Subheading 1</a></li>
-                    <li><a href="#pageheading2">Subheading 2</a></li>
-                    <li><a href="#pageheading3">Subheading 3</a></li>
+                    <li><a href="#pageheading1">PROBLEM STATEMENT</a></li>
+                    <li><a href="#pageheading2">SYSTEM OVERVIEW</a></li>
+                    <li><a href="#pageheading3">SOURCES</a></li>
                 </ul>
             </div>
             <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
             <!------------------------ STANDARD PAGE CONTENT START ------------------------>
             <div class="standard-page-content-wrapper">
                 <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading1">Header</div></div>
+                    <div class="standard-page-content-title"><div id="pageheading1">PROBLEM STATEMENT</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                      In 2020, it's estimated that about 30% of newly diagnosed cancers in American women will be breast cancers, and it is predicted that about 42,170 women in the U.S. will die in 2020 from breast cancer. The overall death rate from breast cancer decreased by 1.3% per year from 2013 to 2017 [1]. These decreases are thought to be the result of treatment advances and earlier detection through screening.
+<br><br>
+However, not all treatments are ideal for each patient. For example, surgical treatment, which has been the oldest method, can be very invasive and may leave behind proliferative cancer cells. Surgery can also be both physically and emotionally scarring for patients.
+<br><br>
+Chemotherapy is a more systemic treatment, compared to surgery which is more localized. However, it is administered intravenously, making it potentially ineffective on tumors that lack vasculature [2]. Another common treatment option, radiotherapy, can cause long-term side effects such as lymphedema and skin changes [3]. Additionally, both of these options are not particularly targeted, giving them the potential to negatively affect healthy tissue.
+<br><br>
+Our team aims to provide another treatment option for breast cancer patients, one that is less invasive and causes less side effects. To this end, we have chosen to work on a targeted bacterial therapy and monitoring system for metastatic breast cancer.
 
-                    <div class="standard-page-content-subheading"></div>
-                    <p class="standard-page-content-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Mauris a faucibus sem, sit amet lobortis ligula.
-                         Curabitur felis arcu, consequat fingilla nibh nec,
-                         tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                          vitae lorem vel, porta maximus neque. Donec viverra
-                          magna sit amet sapien elementum, vitae faucibus.
+
                     </p>
-                    <p class="standard-page-content-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Mauris a faucibus sem, sit amet lobortis ligula.
-                         Curabitur felis arcu, consequat fingilla nibh nec,
-                         tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                          vitae lorem vel, porta maximus neque. Donec viverra
-                          magna sit amet sapien elementum, vitae faucibus.
-                    </p>
-                </div>
-                <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading2">Header</div></div>
-                    <div class="standard-page-content-subheading"></div>
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    </p>
-                </div>
-                <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading3">Header</div></div>
-                    <div class="standard-page-content-subheading">Problem Statement</div>
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
                     <img class="standard-page-content-image" src="">
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading2">SYSTEM OVERVIEW</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                      Our treatment involves injecting bacteria that naturally aggregates inside or near cancer cells. Trichosanthin, our chosen cancer therapeutic, is a weaker relative of the cytotoxin Ricin. It is a small ribosome-inactivating protein derived from the tuber vegetable Trichosanthes kirilowii, also known as the Chinese cucumber [4]. Trichosanthin works by inhibiting the 60S subunit of eukaryotic ribosomes, stopping protein synthesis in the tumor cells and eventually killing them.
+<br><br>
+Because prokaryotic and eukaryotic ribosomes are structurally different, the injected E. coli cells remain safe when producing trichosanthin. Trichosanthin is produced constitutively by the engineered bacteria, and features a translocase tag to efficiently facilitate its export from the bacteria into the cytoplasm of tumor cells. Here, trichosanthin will inactivate protein production in the tumor cell and induce cell death, especially in fast-growing cancer cells.
+<br><br>
+To supplement our bacterial treatment system, we developed a non-invasive method to track metastases. Our bacteria will activate the immune system and express a fluorescent protein called mCardinal. Once trichosanthin has been injected into a patient, our monitoring system would then be used to detect the location of the bacteria, and by extension, the location of tumors and metastases.
+<br><br>
+In short, our goal was to create a targeted treatment that will only affect cancerous cells in the body, greatly reducing the number of side effects from broader treatments. Our scanning system will also allow for earlier detection, leading to an earlier and faster treatment.
+
+                    </p>
+                    <img class="standard-page-content-image" src="">
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading3">SOURCES</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                      [1] Breast Cancer Statistics. 17 July 2019, www.wcrf.org/dietandcancer/cancer-trends/breast-cancer-statistics.
+<br><br>
+[2] Carmeliet, P., Jain, R. Angiogenesis in cancer and other diseases. Nature 407, 249–257 (2000). https://doi.org/10.1038/35025220
+<br><br>
+[3] Borman, P. (2018). Lymphedema diagnosis, treatment, and follow-up from the view point of physical medicine and rehabilitation specialists. Turkish Journal of Physical Medicine and Rehabilitation, 64(3), 179-197. doi:10.5606/tftrd.2018.3539
+<br><br>
+[4] Li, M., Yeung, H., Pan, L., &amp; Chan, S. I. (1991). Trichosanthin, a potent HIV-1 inhibitor, can cleave supercoiled DNAin vitro. Nucleic Acids Research, 19(22), 6309-6312. doi:10.1093/nar/19.22.6309
+<br><br>
+    </p>
+                </div>
+
                 </div>
             </div>
             <!------------------------ STANDARD PAGE CONTENT END ------------------------>
         </div>
         <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
+
         <!------------------------ FOOTER START ------------------------>
         <footer>
             <div class="footer-wrapper">

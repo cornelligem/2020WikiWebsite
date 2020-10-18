@@ -46,10 +46,26 @@
     <link rel="stylesheet" type="text/css" href="styles/grids.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
-
+        $(document).ready(function() {
+            $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
+            $('body').scroll( function(){
+                /* Check the location of each desired element */
+            $('.standard-page-side-bar-content-wrapper').each( function(i){
+                    var top_of_object = $(this).position().top;
+                    var top_of_window = $(window).scrollTop();
+                    /* If the object is completely visible in the window, fade it it */
+                    if( (top_of_window > top_of_object)){
+                        console.log("HELLO");
+                    $('.standard-page-side-bar-wrapper').css({'position':'fixed', 'display':'block'});
+                    }
+                    if ((top_of_window < top_of_object)){
+                        $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
+                    }
+                });
+            });
+        });
     </script>
 
 </head>
@@ -88,14 +104,13 @@
                       <button class="dropbtn">PRODUCT DEVELOPMENT</button>
                           <div class="dropdown-content human-dropdown-content">
                               <a href="modeling.html">MODELING</a>
-                              <a href="design_process.html">DESIGN PROCESS</a>
-                              <a href="hardware.html">HARDWARE</a>
                               <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                              <a href="hardware.html">HARDWARE</a>
                               <a href="implementation.html">IMPLEMENTATION</a>
                           </div>
                   </div>
                   <div class="dropdown">
-                      <button class="dropbtn">TOOLKIT</button>
+                      <button class="dropbtn active-nav">TOOLKIT</button>
                       <div class="dropdown-content toolkit-dropdown-content">
                           <ul>
                               <div class="nav-first-col">
@@ -120,7 +135,7 @@
                           onclick="location.href='description.html'">DESCRIPTION</button>
                   </div>
                   <div class="dropdown">
-                      <button class="dropbtn active-nav"
+                      <button class="dropbtn"
                           onclick="location.href='index.html'">HOME</button>
                   </div>
               </div>
@@ -129,9 +144,7 @@
       <!------------------------ NAV BAR END ------------------------->
         <!------------------------ STANDARD PAGE BANNER START ------------------------>
         <header class="standard-page-banner">
-            <svg viewBox="0 0 100 100" width=100% height=100%>
-                <text text-anchor="middle" alignment-baseline="middle" x=50% y=50%>PARTS</text>
-            </svg>
+          <img class="standard-page-banner" src="images/banners/parts.png" alt="parts banner">
         </header>
         <!------------------------ STANDARD PAGE BANNER END ------------------------>
         <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
