@@ -18,8 +18,8 @@ body {
 .standard-page-side-bar-wrapper{
     position: fixed;
     top: 20px;
-    left: 20px; 
-    display: block; 
+    left: 20px;
+    display: block;
 }
 .tile-title {
     font-family: 'Lato', sans-serif;
@@ -409,8 +409,10 @@ footer {
 }
 
 .parts-table {
-  padding: 40px;
-  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .parts-table th {
@@ -419,6 +421,10 @@ footer {
 
 .parts-table table {
   border-spacing: 5px;
+}
+
+.composite-table {
+  margin-left: -20%;
 }
 
 
