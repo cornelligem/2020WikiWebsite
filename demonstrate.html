@@ -48,6 +48,7 @@
     <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
+<<<<<<< HEAD
    <!-- <script>
         $(document).ready(function() {
             console.log("SCROLL");
@@ -72,6 +73,17 @@
             });
         });
     </script> -->
+=======
+    <script>
+<<<<<<< HEAD
+
+=======
+        $('body').scroll(function() {
+    $('standard-page-side-bar').css('bottom', $(this).scrollTop());
+});
+>>>>>>> 69694e6e40a3fa2b533769913cb7ce6929b131a2
+    </script>
+>>>>>>> ae527c19c877d247029ed29bb7a4294bbd030c34
 
 </head>
 <!--NOTE: REMEMBER TO CHANCE active-page CLASS TO CORRECT DROPDOWN-->
@@ -109,9 +121,8 @@
                       <button class="dropbtn">PRODUCT DEVELOPMENT</button>
                           <div class="dropdown-content human-dropdown-content">
                               <a href="modeling.html">MODELING</a>
-                              <a href="design_process.html">DESIGN PROCESS</a>
-                              <a href="hardware.html">HARDWARE</a>
                               <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                              <a href="hardware.html">HARDWARE</a>
                               <a href="implementation.html">IMPLEMENTATION</a>
                           </div>
                   </div>
@@ -150,9 +161,7 @@
       <!------------------------ NAV BAR END ------------------------->
         <!------------------------ STANDARD PAGE BANNER START ------------------------>
         <header class="standard-page-banner">
-            <svg viewBox="0 0 100 100" width=100% height=100%>
-                <text text-anchor="middle" alignment-baseline="middle" x=50% y=50%>DEMONSTRATE</text>
-            </svg>
+          <img class="standard-page-banner" src="images/banners/demonstrate.png" alt="demonstrate banner">
         </header>
         <!------------------------ STANDARD PAGE BANNER END ------------------------>
         <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
