@@ -48,15 +48,30 @@
     <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
-    <script>
-<<<<<<< HEAD
-
-=======
-        $('body').scroll(function() { 
-    $('standard-page-side-bar').css('bottom', $(this).scrollTop());
-});
->>>>>>> 69694e6e40a3fa2b533769913cb7ce6929b131a2
-    </script>
+   <!-- <script>
+        $(document).ready(function() {
+            console.log("SCROLL");
+            /* Every time the window is scrolled ... */
+            /*$('.graphic-container').each( function(i){
+                $(this).animate({'opacity':'1'},1500);
+            }); */
+            $('body').scroll( function(){
+                /* Check the location of each desired element */
+               $('.standard-page-side-bar-wrapper').each( function(i){
+                    var top_of_object = $(this).position().top;
+                    var top_of_window = $(window).scrollTop();
+                    /* If the object is completely visible in the window, fade it it */
+                    if( (top_of_window > top_of_object) && ($(this).css("position")=="relative")){
+                        console.log("HELLO");
+                       $(this).css({'position':'fixed', 'top':'0', 'grid-area':'standardpagesidebar'});
+                    }
+                    if ((top_of_window < top_of_object) && ($(this).css("position")=="fixed")){
+                       $(this).css({'position':'relative'});
+                    }
+                });
+            });
+        });
+    </script> -->
 
 </head>
 <!--NOTE: REMEMBER TO CHANCE active-page CLASS TO CORRECT DROPDOWN-->
@@ -143,7 +158,7 @@
         <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
         <div class="standard-page-side-bar-content-wrapper">
             <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
-            <div class="standard-page-side-bar-wrapper">
+            <div class="standard-page-side-bar-wrapper" style="position: relative">
                 <ul class="standard-page-side-bar">
                     <li><a href="#pageheading1">Kill Switch</a></li>
                     <li><a href="#pageheading2">Florescence Detection</a></li>
