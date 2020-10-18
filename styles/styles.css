@@ -673,3 +673,301 @@ p.team-page-content-text {
 
 
 /******************** ENTREPRENEURSHIP PAGE END ********************/
+/************************* TIME LINE ********************************/
+/********************************* PRACTICES TIMELINE  ********************************/
+
+.timeline {
+    position: relative;
+    margin-top: 100px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    width: 1.5px;
+    background: #808080;
+    z-index: 1;
+}
+
+.inspiration-timeline::before {
+    transform: translate(-50%, -52%);
+    height: 1250px;
+    top: 650px;
+}
+
+.ideation-timeline::before {
+    transform: translate(-50%, -51%);
+    height: 2370px;
+    top: 1215px;
+}
+
+.implementation-timeline::before {
+    transform: translate(-50%, -51.2%);
+    height: 1140px;
+    top: 580px;
+}
+
+.timeline-block {
+    margin-bottom: 50px;
+}
+
+.timeline-img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+    width: 100%;
+}
+
+.date {
+    font-family: 'Source Sans Pro', serif;
+    font-size: 18px;
+}
+
+.timeline-content h3 {
+    font-family: 'Source Sans Pro', serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.timeline-content p {
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.timeline-content-left {
+    padding-left: 0;
+    text-align: right;
+}
+
+.timeline-content-right {
+    padding-right: 0;
+}
+
+.marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #567151;
+    background: #567151;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.urban-info {
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 995px) {
+    .timeline::before {
+        display: none;
+    }
+    .marker {
+        display: none;
+    }
+}
+
+
+/********************************* END PRACTICES TIMELINE  ********************************/
+
+
+/* Typography */
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+
+/* Tab */
+
+.tab-section-01 .content>.tab-pane {
+    display: none;
+}
+
+.tab-section-01 .content>.active {
+    display: block;
+}
+
+.tab-section-01 .content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.tab-section-01 .tabs li {
+    display: inline-block;
+    border: 3px solid #a0e0bd;
+}
+
+.tab-section-01 .tabs li a {
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+}
+
+.tab-section-01.style-1 .tabs li {
+    margin-right: 5px;
+}
+
+.tab-section-01.style-1 .tabs li a {
+    font-size: 12px;
+    font-weight: 700;
+    outline: none;
+    padding: 10px 30px;
+    color: #000;
+}
+
+.tab-section-01.style-1 .tabs li.active a,
+.tab-section-01.style-1 .tabs li.active a:focus,
+.tab-section-01.style-1 .tabs li.active a:hover {
+    color: #ffffff;
+    background-color: #567151;
+    border-color: #567151;
+    cursor: default;
+}
+
+.tab-section-01.style-1 .tabs li:hover a {
+    background-color: #ffffff;
+}
+
+.tab-section-01.style-2 .content {
+    padding: 35px;
+    border: 1px solid #dddddd;
+    border-top: none;
+}
+
+.tab-section-01.style-2 .tabs {
+    position: relative;
+    letter-spacing: -4px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+.tab-section-01.style-2 .tabs>li {
+    letter-spacing: 0;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+.tab-section-01.style-2 .tabs>li:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+}
+
+.tab-section-01.style-2 .tabs>li a {
+    padding: 10px 30px;
+}
+
+.tab-section-01.style-2 .tabs>li a:hover {
+    background-color: #eeeeee;
+}
+
+.tab-section-01.style-2 .tabs>li.active {
+    border-bottom-color: white;
+    border-top: 1px solid #30b397;
+}
+
+.tab-section-01.style-2 .tabs>li.active:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #30b397;
+}
+
+.tab-section-01.style-2 .tabs>li.active a,
+.tab-section-01.style-2 .tabs>li.active a:hover,
+.tab-section-01.style-2 .tabs>li.active a:focus {
+    cursor: default;
+    background-color: #ffffff;
+}
+
+.tab-section-01.style-3 .content {
+    padding: 35px;
+    border: 1px solid #dddddd;
+    border-top: none;
+}
+
+.tab-section-01.style-3 .tabs {
+    position: relative;
+    letter-spacing: -4px;
+    text-align: right;
+    border-bottom: 1px solid #dddddd;
+}
+
+.tab-section-01.style-3 .tabs>li {
+    letter-spacing: 0;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+.tab-section-01.style-3 .tabs>li:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+}
+
+.tab-section-01.style-3 .tabs>li a {
+    padding: 10px 30px;
+}
+
+.tab-section-01.style-3 .tabs>li a:hover {
+    background-color: #eeeeee;
+}
+
+.tab-section-01.style-3 .tabs>li.active {
+    border-bottom-color: white;
+    border-top: 1px solid #30b397;
+}
+
+.tab-section-01.style-3 .tabs>li.active:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #30b397;
+}
+
+.tab-section-01.style-3 .tabs>li.active a,
+.tab-section-01.style-3 .tabs>li.active a:hover,
+.tab-section-01.style-3 .tabs>li.active a:focus {
+    cursor: default;
+    background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .tab-section-01 .tabs li {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .tab-section-01 .tabs li a {
+        width: 100%;
+        padding: 10px 35px;
+    }
+}
