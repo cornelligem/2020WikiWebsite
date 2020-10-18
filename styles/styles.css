@@ -390,6 +390,35 @@ footer {
 /******************** STANDARD PAGE END ********************/
 
 
+/********************* PARTS PAGES START ********************/
+
+.parts-table table {
+  border: 1px solid black;
+}
+
+.parts-table th, td {
+  padding: 25px;
+  border-bottom: 1px solid #797979;
+
+}
+
+.parts-table {
+  padding: 40px;
+  padding-bottom: 100px;
+}
+
+.parts-table th {
+  text-align: left;
+}
+
+.parts-table table {
+  border-spacing: 5px;
+}
+
+
+/******************* PARTS PAGES END **********************/
+
+
 /******************** TEAM PAGE START ********************/
 
 .team-page-banner {
