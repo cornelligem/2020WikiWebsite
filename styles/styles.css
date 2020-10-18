@@ -43,7 +43,7 @@ nav {
     padding-top: 15px;
     padding-right: 40px;
     background-color: #161616;
-    height: 80px;
+    height: 90px;
 }
 
 .nav-bar-logo {
@@ -56,6 +56,10 @@ nav {
 
 .nav-bar-logo img {
     width: 140px;
+}
+
+.nav-bar-wrapper {
+  height: 80px;
 }
 
 .dropbtn {
@@ -177,6 +181,7 @@ nav {
 
 .standard-page-banner {
   width: 100%;
+  margin-top:-5px;
 }
 
 footer {
@@ -262,7 +267,6 @@ footer {
 .home-banner-wrapper {
     position: relative;
     background: #161616;
-    height: 675px;
     width: 100%;
     margin-top: -5px;
 }
@@ -333,30 +337,22 @@ footer {
 
 /******************** STANDARD PAGE START ********************/
 
-.standard-page-banner {
-    background-color: #275E69;
-    background-size: cover;
-    fill: black;
-    font-size: 14px;
-}
-
 .standard-page-side-bar-content-wrapper {
-    padding: 5% 0;
+  margin-top: -5%;
 }
 
 .standard-page-side-bar>li>a {
     text-decoration: none;
     color: #000000;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .standard-page-side-bar {
     list-style-type: none;
-    padding-left: 15px;
+    padding-left: 10px;
     padding-right: 15px;
     vertical-align: middle;
-    margin-top: 40px;
-
+    padding-top: 10%;
 }
 
 .standard-page-side-bar>li {

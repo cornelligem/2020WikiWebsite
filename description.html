@@ -46,7 +46,6 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" type="text/css" href="styles/grids.css">
     <!-- JS -->
-    <script src="http://2019.igem.org/Team:Cornell/jquerymin?action=raw&ctype=text/javascript"></script>
 </head>
 
 <body>
@@ -83,9 +82,8 @@
                       <button class="dropbtn">PRODUCT DEVELOPMENT</button>
                           <div class="dropdown-content human-dropdown-content">
                               <a href="modeling.html">MODELING</a>
-                              <a href="design_process.html">DESIGN PROCESS</a>
-                              <a href="hardware.html">HARDWARE</a>
                               <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                              <a href="hardware.html">HARDWARE</a>
                               <a href="implementation.html">IMPLEMENTATION</a>
                           </div>
                   </div>
@@ -124,28 +122,19 @@
       <!------------------------ NAV BAR END ------------------------->
         <!------------------------ STANDARD PAGE BANNER START ------------------------>
         <header class="standard-page-banner">
-            <svg viewBox="0 0 100 100" width=100% height=100%>
-                <circle cx="50" cy="50" r="40" fill="white" fill-opacity="0.4"/>
-                <text text-anchor="middle" alignment-baseline="middle" x=50% y=50%>About</text>
-            </svg>
+          <img class="standard-page-banner" src="images/banners/description.png" alt="description banner">
         </header>
         <!------------------------ STANDARD PAGE BANNER END ------------------------>
-                <!------------------------ STANDARD PAGE BANNER START ------------------------>
-        <header class="standard-page-banner">
-            <svg viewBox="0 0 100 100" width=100% height=100%>
-                <circle cx="50" cy="50" r="40" fill="white" fill-opacity="0.4"/>
-                <text text-anchor="middle" alignment-baseline="middle" x=50% y=50%>About</text>
-            </svg>
-        </header>
-        <!------------------------ STANDARD PAGE BANNER END ------------------------>
+
         <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
         <div class="standard-page-side-bar-content-wrapper">
             <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
             <div class="standard-page-side-bar-wrapper">
                 <ul class="standard-page-side-bar">
                     <li><a href="#pageheading1">PROJECT OVERVIEW</a></li>
-                    <li><a href="#pageheading2">PAGE HEADING 2</a></li>
-                    <li><a href="#pageheading3">PAGE HEADING 3</a></li>
+                    <li><a href="#pageheading2">PROJECT DESCRIPTION</a></li>
+                    <li><a href="#pageheading3">PROJECT INSPIRATION</a></li>
+                    <li><a href="#pageheading4">SOURCES</a></li>
                 </ul>
             </div>
             <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
@@ -153,43 +142,79 @@
             <div class="standard-page-content-wrapper">
                 <div class="standard-page-content-section">
                     <div class="standard-page-content-title"><div id="pageheading1">PROJECT OVERVIEW</div></div>
-                    <hr class="green-accent-line-left">
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
-                        At Cornell iGEM, we understand the risks associated with our
-              work and take all necessary precautions to minimize those risks. As a team, we take safety
-              very seriously and a detailed description of our procedures can be found below.
-              Our protocols are guided by the risk matrix, as we try to both minimize the likelihood
-              of an incident as well as the severity of an incident. Our completed safety form can
-              be found <a id="safety-hyperlink" href="https://2019.igem.org/File:T--Cornell--Safety2019_Spreadsheet.xls">here</a>.
+                      Cornell iGEM’s 2020 project is titled “Lumicure”. Lumicure is a model cancer bacteriotherapy
+                      system composed of two parts: genetically modified E. coli and a fluorescent reader device.
+                      The E. coli are programmed to release two key components: Trichosanthin, a therapeutic,
+                      and mCardinal, a red fluorescent protein. The fluorescent reader device detects the red
+                      glow from mCardinal.
+<br>
+<br>
+  Please note that due to COVID-19, we were largely unable to work in the lab this year and so all work on
+  Lumicure was done virtually. Even without a physical product or testing, we hope that we can effectively
+  demonstrate a proof-of-concept in Lumicure for developing an effective cancer treatment in the future.
+
                     </p>
                     <img class="standard-page-content-image" src="">
                 </div>
                 <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading2">PAGE HEADING 2</div></div>
-                    <hr class="green-accent-line-left">
+                    <div class="standard-page-content-title"><div id="pageheading2">PROJECT DESCRIPTION</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                      Lumicure is a bacteriotherapy treatment and tracking system for cancerous malignant tumors. Paired with a patient’s primary therapy, our system aims to identify the physical location of breast cancer metastases and increase therapeutic potency against tumor cells.
+<br><br>
+Lumicure takes advantage of the fact that cancerous tumors have an immunoprivileged microenvironment and that tumor cells tend to have high lactate concentrations as a result of increased aerobic glycolysis. Even wild-type bacteria tend to colonize these tumors at a significantly higher rate than in healthy tissue. Furthermore, bacteria tend to colonize intracellularly in tumor cells, and therefore would follow malignancies as they detach from primary tumors and to a secondary location.
+<br><br>
+
+In order to effectively supplement the patient’s main cancer therapy, the bacteria have been designed to release Trichosanthin, a ribosome-inactivating protein, which targets eukaryotic cells. Our genetically engineered bacteria’s genome also contains a Holin/Antiholin kill switch that allows the bacteria to survive and reproduce in high-lactate tumor environments while inducing apoptosis in low-level lactate concentrations. This ensures that our bacteria are only active in tumor cells and not in healthy human tissue. Additionally, we believe that our E. coli may act as an immunotherapy as well and recruit components of the immune system to the site of the tumor, which are typically suppressed otherwise.
+<br><br>
+
+Our bacteria’s genome has been designed to also express mCardinal, a red fluorescent protein. This allows any patient to use our fluorescent reader device, designed by our Product Development subteam, to safely and frequently monitor the tumor growth and metastasis noninvasively through the skin by detection of a red glow. This detection system consists of an excitation filter and emission filter, a dichroic mirror, a laser, and a raspberry pi microcontroller. These elements together allow for vigilant scans at home on a regular basis to help ensure any metastases are caught and treated early.
+
                     </p>
                     <img class="standard-page-content-image" src="">
                 </div>
                 <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading3">PAGE HEADING 3</div></div>
-                    <hr class="green-accent-line-left">
+                    <div class="standard-page-content-title"><div id="pageheading3">PROJECT INSPIRATION</div></div>
+                    <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum."</p>
+                      Lumicure began with a vision from our passionate team members to design and test a cancer therapeutic system which is a cost-effective alternative to conventional treatment methods, such as chemotherapy or radiation therapy. Specifically, we turned our focus towards breast cancer: this disease is diagnosed in over 270,000 people in the USA every single year. For a given cancer patient in the United States, the average lifetime cancer-related expenses was roughly $50,000 in 2019. With genetically engineered bacteria, however, we hope to lower that number to the order of hundreds of dollars, significantly decreasing the financial burden and making the treatment available to patients of a more diverse socioeconomic background.
+<br><br>
+In addition to improving the financial outlook for cancer patients, we also intended from the beginning to build a patient-centered monitoring device for the primary tumor and any metastases. This monitoring device, Trichoscan, was spawned due to its perceived ease of use and relatively cheap construction materials. With the tools to monitor the progress of their own cancer in the patients’ hands, we hope to demystify hospital visits and bridge the gap of knowledge between a patient and their doctors.
+<br><br>
+Throughout the season, we have made it our goal to collaborate with institutions, scientists, doctors, and patients in the Ithaca area to construct Lumicure in the most cost-effective, safe, and patient-friendly way as possible. Though we did not have a chance to build and test our systems, we are nonetheless incredibly proud to present Lumicure to you.
+</p>
+                    <img class="standard-page-content-image" src="">
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading4">SOURCES</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                      Din, M Omar et al. “Synchronized cycles of bacterial lysis for in vivo delivery.” Nature vol. 536,7614 (2016): 81-85. doi:10.1038/nature18930
+<br><br>
+iGEM TUDelft. “Peptidor”. Delft University of Technology, 2013. http://2013.igem.org/Team:TU-Delft
+<br><br>
+Piper, Sophie K et al. “Towards whole-body fluorescence imaging in humans.” PloS one vol. 8,12 e83749. 31 Dec. 2013, doi:10.1371/journal.pone.0083749
+<br><br>
+Dunsing, V., Luckner, M., Zühlke, B. et al. Optimal fluorescent protein tags for quantifying protein oligomerization in living cells. Sci Rep 8, 10634 (2018). https://doi.org/10.1038/s41598-018-28858-0
+<br><br>
+Lambert, TJ (2019) FPbase: a community-editable fluorescent protein database. Nature Methods. 16, 277–278. doi: 10.1038/s41592-019-0352-8
+<br><br>
+Fang EF, Zhang CZY, Zhang L, Wong JH, Chan YS, et al. (2012) Trichosanthin Inhibits Breast Cancer Cell Proliferation in Both Cell Lines and Nude Mice by Promotion of Apoptosis. PLOS ONE 7(9): e41592. https://doi.org/10.1371/journal.pone.0041592
+<br><br>
+Deshmukh, Ashish A et al. “Total Lifetime and Cancer-related Costs for Elderly Patients Diagnosed With Anal Cancer in the United States.” American journal of clinical oncology vol. 41,2 (2018): 121-127. doi:10.1097/COC.0000000000000238
+<br><br>
+ “U.S. Breast Cancer Statistics.” Breastcancer.org, 2020. https://www.breastcancer.org/symptoms/understand_bc/statistics
+
+<br>
+<br>
+
+</p>
                     <img class="standard-page-content-image" src="">
                 </div>
             </div>
@@ -198,6 +223,7 @@
         <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
 
         <!------------------------ FOOTER START ------------------------>
+
         <footer>
             <div class="footer-wrapper">
                 <div class="icon-wrapper">
