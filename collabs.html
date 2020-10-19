@@ -47,24 +47,33 @@
   <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script>
-      $(document).ready(function() {
-          $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
-          $('body').scroll( function(){
-              /* Check the location of each desired element */
-          $('.standard-page-side-bar-content-wrapper').each( function(i){
-                  var top_of_object = $(this).position().top;
-                  var top_of_window = $(window).scrollTop();
-                  /* If the object is completely visible in the window, fade it it */
-                  if( (top_of_window > top_of_object)){
-                      console.log("HELLO");
-                  $('.standard-page-side-bar-wrapper').css({'position':'fixed', 'display':'block'});
-                  }
-                  if ((top_of_window < top_of_object)){
-                      $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
-                  }
-              });
-          });
+    $(document).ready(function() {
+      $('.standard-page-side-bar-wrapper').css({
+        'position': 'fixed',
+        'display': 'none'
       });
+      $('body').scroll(function() {
+        /* Check the location of each desired element */
+        $('.standard-page-side-bar-content-wrapper').each(function(i) {
+          var top_of_object = $(this).position().top;
+          var top_of_window = $(window).scrollTop();
+          /* If the object is completely visible in the window, fade it it */
+          if ((top_of_window > top_of_object)) {
+            console.log("HELLO");
+            $('.standard-page-side-bar-wrapper').css({
+              'position': 'fixed',
+              'display': 'block'
+            });
+          }
+          if ((top_of_window < top_of_object)) {
+            $('.standard-page-side-bar-wrapper').css({
+              'position': 'fixed',
+              'display': 'none'
+            });
+          }
+        });
+      });
+    });
   </script>
 </head>
 <!--NOTE: REMEMBER TO CHANCE active-page CLASS TO CORRECT DROPDOWN-->
@@ -73,72 +82,70 @@
   <div class="standard-page-wrapper">
     <!------------------------ NAV BAR START ------------------------>
     <nav>
-        <div class="nav-bar-wrapper">
-            <div class="nav-bar-main-menu">
-              <a href="index.html"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
-                <div class="dropdown">
-                    <button class="dropbtn">TEAM</button>
-                    <div class="dropdown-content team-dropdown-content">
-                        <a href="bios.html">BIOS</a>
-                        <a href="sponsors.html">SPONSORS</a>
-                        <a href="attributions.html">ATTRIBUTIONS</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn active-nav">OUTREACH</button>
-                    <div class="dropdown-content outreach-dropdown-content">
-                        <a href="education.html">EDUCATION & ENGAGEMENT</a>
-                        <a href="collabs.html">COLLABORATIONS</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">HUMAN PRACTICES</button>
-                    <div class="dropdown-content human-dropdown-content">
-                        <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
-                        <a href="policies.html">POLICIES</a>
-                        <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">PRODUCT DEVELOPMENT</button>
-                        <div class="dropdown-content human-dropdown-content">
-                            <a href="modeling.html">MODELING</a>
-                            <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
-                            <a href="hardware.html">HARDWARE</a>
-                            <a href="implementation.html">IMPLEMENTATION</a>
-                        </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">TOOLKIT</button>
-                    <div class="dropdown-content toolkit-dropdown-content">
-                        <ul>
-                            <div class="nav-first-col">
-                                <li class="wet-lab-list-title"><b>WET LAB</b></li>
-                                <li><a href="foundation.html">FOUNDATIONS</a></li>
-                                <li><a href="demonstrate.html">DEMONSTRATE</a></li>
-                                <li><a href="part.html">PARTS</a></li>
-                                <li><a href="basic_part.html">BASIC PARTS</a></li>
-                                <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
-                            </div>
-                            <div class="nav-second-col">
-                                <li class="pd-list-title"><b>DOCUMENTATION</b></li>
-                                <li><a href="notebook.html">NOTEBOOK</a></li>
-                                <li><a href="safety.html">SAFETY</a></li>
-                                <li><a href="contribution.html">CONTRIBUTION</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn"
-                        onclick="location.href='description.html'">DESCRIPTION</button>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn"
-                        onclick="location.href='index.html'">HOME</button>
-                </div>
+      <div class="nav-bar-wrapper">
+        <div class="nav-bar-main-menu">
+          <a href="index.html"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
+            <div class="dropdown">
+              <button class="dropbtn">TEAM</button>
+              <div class="dropdown-content team-dropdown-content">
+                <a href="bios.html">BIOS</a>
+                <a href="sponsors.html">SPONSORS</a>
+                <a href="attributions.html">ATTRIBUTIONS</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn active-nav">OUTREACH</button>
+              <div class="dropdown-content outreach-dropdown-content">
+                <a href="education.html">EDUCATION & ENGAGEMENT</a>
+                <a href="collabs.html">COLLABORATIONS</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">HUMAN PRACTICES</button>
+              <div class="dropdown-content human-dropdown-content">
+                <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
+                <a href="policies.html">POLICIES</a>
+                <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">PRODUCT DEVELOPMENT</button>
+              <div class="dropdown-content human-dropdown-content">
+                <a href="modeling.html">MODELING</a>
+                <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                <a href="hardware.html">HARDWARE</a>
+                <a href="implementation.html">IMPLEMENTATION</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">TOOLKIT</button>
+              <div class="dropdown-content toolkit-dropdown-content">
+                <ul>
+                  <div class="nav-first-col">
+                    <li class="wet-lab-list-title"><b>WET LAB</b></li>
+                    <li><a href="foundation.html">FOUNDATIONS</a></li>
+                    <li><a href="demonstrate.html">DEMONSTRATE</a></li>
+                    <li><a href="part.html">PARTS</a></li>
+                    <li><a href="basic_part.html">BASIC PARTS</a></li>
+                    <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
+                  </div>
+                  <div class="nav-second-col">
+                    <li class="pd-list-title"><b>DOCUMENTATION</b></li>
+                    <li><a href="notebook.html">NOTEBOOK</a></li>
+                    <li><a href="safety.html">SAFETY</a></li>
+                    <li><a href="contribution.html">CONTRIBUTION</a></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="location.href='description.html'">DESCRIPTION</button>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="location.href='index.html'">HOME</button>
             </div>
         </div>
+      </div>
     </nav>
     <!------------------------ NAV BAR END ------------------------->
     <!------------------------ STANDARD PAGE BANNER START ------------------------>
@@ -152,11 +159,9 @@
       <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
       <div class="standard-page-side-bar-wrapper">
         <ul class="standard-page-side-bar">
-          <li><a href="#pageheading1">Overview</a></li>
-          <li><a href="#pageheading2">Harmful Algal Blooms (HABs) Informational Booklet</a></li>
-          <li><a href="#pageheading3">Mentorship</a></li>
-          <li><a href="#pageheading4">William & Mary iGEM</a></li>
-          <li><a href="#pageheading5">SZTA_Szeged_HU iGEM</a></li>
+          <li><a href="#pageheading1">COVID-19 Survey</a></li>
+          <li><a href="#pageheading2">iGEM: Breaking Down Synthetic <br>Biology YouTube Channel</a></li>
+          <li><a href="#pageheading3">SDG Collaboration</a></li>
         </ul>
       </div>
       <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
@@ -164,126 +169,122 @@
       <div class="standard-page-content-wrapper">
         <div class="standard-page-content-section">
           <div class="standard-page-content-title">
-            <div id="pageheading1">Overview</div>
+            <div id="pageheading1">COVID-19 Survey</div>
           </div>
-          <hr class="green-accent-line-left">
-          <br> <br>
-          <p class="standard-page-content-text">
-            This year, Cornell iGEM had the honor of working with several different iGEM teams across the globe on both
-            technical- and outreach-oriented collaborations. We received valuable feedback on how to improve our
-            informational booklet designed to educate members of the community on the issue of harmful algal blooms
-            (HABs). We also mentored a new high school team and helped them get up-to-speed with how the iGEM
-            competition runs. Finally, we worked with another team to optimize and test components of the Wet Lab
-            aspects of our respective projects. Through these partnerships, our team was able to expand upon the
-            possibilities of collaborative synthetic biology and learn more about how we can solve big issues using
-            microscopic tools.
-          </p>
-        </div>
-        <div class="standard-page-content-section">
-          <div class="standard-page-content-title">
-            <div id="pageheading2">Harmful Algal Blooms (HABs) Informational Booklet</div>
-          </div>
-          <hr class="green-accent-line-left">
-          <br><br>
-          <p class="standard-page-content-text">
-            Cornell iGEM sought to demystify the subject of HABs by creating an informational booklet that summarizes
-            the background, prevalence, and existing treatment methods for HABs. We sent the first draft of our booklet
-            to Ohio State iGEM and Toronto iGEM to obtain feedback on the content and formatting of our booklet to
-            ensure it is readily accessible to readers. Below, we have detailed the feedback provided to us by these
-            teams and how we incorporated their suggestions into the final draft presented on our Wiki.
-          </p>
-          <div class="standard-page-content-subheading" style="font-weight: 1000">Ohio State iGEM</div>
-          <p class="standard-page-content-text">
-            The members of the Ohio State iGEM team found our booklet very informative and well-cited. However, their
-            feedback mentioned that our booklet had too much technical detail that occasionally took away from the
-            primary focus of each section, so we cut down and made our sections more concise. We also took their advice
-            to include a brief sentence explaining the examples listed on the Current Solutions page before discussing
-            their respective pros and cons.
-          </p>
-          <div class="standard-page-content-subheading" style="font-weight: 1000">Toronto iGEM</div>
-          <p class="standard-page-content-text">
-            Toronto iGEM recommended reformatting the Current Solutions page to make it easier for readers to compare
-            between example solutions and to recognize their respective strengths and weaknesses. Going off of this
-            suggestion, our team made modifications to the Current Solutions section and also decided to include an
-            additional page recapitulating the ways in which our project covers the weak points of other solutions.
-          </p>
-          <img class="standard-page-content-image" src="">
-        </div>
-        <div class="standard-page-content-section">
-          <div class="standard-page-content-title">
-            <div id="pageheading3">Mentorship</div>
-          </div>
-          <hr class="green-accent-line-left">
-          <br><br>
-          <img class="standard-page-content-image" src="images/Meeting with Korea_HS iGEM.png"
-            style="height: 400px; width: 500px">
-          <div class="standard-page-content-subheading" style="font-weight: 1000">Korea_HS iGEM</div>
-          <p class="standard-page-content-text">
-            Over the summer, our team mentored the Korea_HS iGEM team after they reached out to us with questions about
-            the iGEM competition process. We held an initial Skype meeting on July 6th, 2019, where we shared our
-            project ideas and our experiences on iGEM. As it was Korea_HS’s first year participating in the competition,
-            we provided insight into what iGEM is and what Cornell iGEM has done as a team in the past. In regards to
-            the competition itself, Korea_HS had questions regarding the characterization section of the Bronze Medal
-            criteria and the formatting of the presentation and the poster, so we explained the characterization section
-            and provided tips on how to efficiently and effectively prepare for each portion of the competition. We had
-            a follow-up meeting on August 3rd, 2019, for an update on the team’s progress on their project and to answer
-            any remaining questions they had regarding the competition. </p>
-        </div>
-        <div class="standard-page-content-section">
-          <div class="standard-page-content-title">
-            <div id="pageheading4">William & Mary iGEM</div>
-          </div>
-          <hr class="green-accent-line-left">
-          <br><br>
-          <img class="standard-page-content-image" src="images/william_mary.jpeg" style="height: 400px; width: 300px">
+          <hr class="yellow-accent-line-left">
+          <br>
           <br>
           <p class="standard-page-content-text">
-            On September 22nd, Cornell iGEM held a Skype meeting with the members of W&M iGEM to discuss the integration
-            of their curli fibers into our bioreactor. Since curli fibers enable biofilm development, our team sought to
-            use them to improve the efficiency of trapping our bacteria in alginate beads. After we received the DNA
-            parts from W&M iGEM, we tested whether the efficiency of our bioreactor was higher with or without the curli
-            fibers. [results?]
+            During the 2020 season, we at Cornell iGEM sought to understand how different teams around the world were being affected by and responding to the COVID-19 pandemic. So, we wrote a corresponding survey and sent it out to roughly 150
+            different teams from around the world, with over 20 teams responding. The data from this survey was collected and condensed into a concise infographic, which was subsequently sent to the responding teams and to the iGEM Headquarters.
+            Additionally, the complete survey results were made viewable for all teams who participated.
             <br>
-            Our team also forwarded our alginate bead formation protocol to W&M iGEM so they could look for the
-            experimental conditions that promote optimized bacterial adhesion onto the alginate beads. [results?] </p>
+            <br>
+            In this collaborative effort, we hoped to connect a network of iGEM teams together so they could learn from one another’s response strategies. Additionally, we hoped to supply the iGEM Headquarters with valuable information about planning
+            for this season and future seasons in the face of the COVID-19 pandemic.
+            <br>
+            <br>
+            Below, you can view our infographic with the compiled data on it in addition to the questions included on our survey.
+            <img src="images/collab/covid.png" style="width: 80%; height: 70%;">
+          <div class="standard-page-content-subheading" style="font-weight: 1000">Survey Quesions</div>
+          <br>
+          Section 1
+          <ol style="line-height: 1.5;">
+            <li>Which iGEM team do you represent?</li>
+            <li>What is a good email address to contact your team with?</li>
+          </ol>
+          <br>
+          Section 2
+          <br>
+          <ol start="3" style="line-height: 1.5;">
+            <li>How severely do you anticipate your research activities will be affected by the COVID-19 outbreak? (1 to 5)</li>
+            <li>Do you know what date you will be able to resume research activities on campus/in your lab? If yes, what date?</li>
+            <li>How has the COVID-19 outbreak hindered your ability to acquire funding for your project? (1 to 5)</li>
+            <li>Please use this section to describe your answer to the above question, if desired.</li>
+            <li>Are you able to order materials for your project while you are working remotely away from campus?</li>
+            <li>How has the COVID-19 outbreak hindered your ability to conduct interviews for HUMAN PRACTICES-related purposes? (1 to 5)</li>
+            <li>Please use this section to describe your answer to the above question, if desired.</li>
+            <li>How has the COVID-19 outbreak hindered your ability to conduct or attend events for HUMAN PRACTICES-related purposes? (1 to 5)</li>
+            <li>Please use this section to describe your answer to the above question, if desired.</li>
+            <li>How has the COVID-19 outbreak hindered your ability to conduct interviews for BUSINESS MODEL-related purposes? (1 to 5)</li>
+            <li>Please use this section to describe your answer to the above question, if desired.</li>
+            <li>How has the COVID-19 outbreak hindered your ability to design a competition website (wiki) for the 2020 season? (1 to 5)</li>
+            <li>Please use this section to describe your answer to the above question, if desired.</li>
+            <li>Would you like to see the competition moved to a later date? Please explain your answer in "Other", if desired. (Yes or No)</li>
+          </ol>
+          <br>
+          Section 3
+          <br>
+          <ol start="17" style="line-height: 1.5;">
+            <li>Outline your team's typical competitive season workflow. For example, when do you do most of your work? How long do you have to work on a given project? Dates, times, etc.</li>
+            <li>In reference to the question above, how has the COVID-19 outbreak affected your typical season workflow?</li>
+            <li>Would you like to see the deadline for REGISTRATION PAYMENT of April 30th moved to a later date?</li>
+            <li>If you answered "Yes" to the above question, what date would you like this to be?</li>
+            <li>Would you like to see the deadline for REGISTRATION CANCELLATION DATE of May 1st moved to a later date?</li>
+            <li>If you answered "Yes" to the above question, what date would you like this to be?</li>
+          </ol>
+          <br>
+          Section 4
+          <br>
+          <ol start="23" style="line-height: 1.5;">
+            <li>How effectively does this form address your concerns about the 2020 season regarding COVID-19?</li>
+            <li>Please include any feedback you have for this form.</li>
+          </ol>
+          </p>
         </div>
         <div class="standard-page-content-section">
           <div class="standard-page-content-title">
-            <div id="pageheading5">SZTA_Szeged_HU iGEM</div>
+            <div id="pageheading2">iGEM: Breaking Down Synthetic Biology YouTube Channel</div>
           </div>
-          <hr class="green-accent-line-left">
+          <hr class="yellow-accent-line-left">
+          <br>
+          <br>
+          <p class="standard-page-content-text">
+            This year, our team had the opportunity to collaborate with Ohio State University, Purdue University, Michigan State University, University of Maryland, and the College of William & Mary iGEM teams to educate the public about synthetic
+            biology and how iGEM teams function. We wrote scripts for two Youtube videos. The first covered our own project, Lumicure, and the second gave a brief introduction and summary on bioterrorism. We focused on presenting the facts, as well
+            as pros and cons of the topics in an unbiased manner. Our team members also narrated a few videos that were scripted by other teams in the collaboration. The effort made by each team was in hopes to engage and inform the general in a safe
+            and easy way. Each video is presented in a format that will allow even those with little biology background to understand. You can find the Youtube channel <a
+              href="https://www.youtube.com/channel/UCqo-3fyiPyp9xgsOLHzTKaQ/featured">here</a>.
+          </p>
+        </div>
+        <div class="standard-page-content-section">
+          <div class="standard-page-content-title">
+            <div id="pageheading3">SDG Collaboration</div>
+          </div>
+          <hr class="yellow-accent-line-left">
           <br><br>
           <p class="standard-page-content-text">
-            Cornell iGEM held a Skype call with members of SZTA_Szeged_HU iGEM on September 14th. We exchanged public
-            engagement surveys as a way to broaden the scope of our respective projects by gaining feedback from an
-            international perspective.</p>
+            This season we also collaborated with the UPCH Peru iGEM team to highlight the ways in which each team is contributing towards the Sustainable Development Goals (SDGs) outlined by the United Nations.
+            <br>
+            Together, we built a slideshow presentation upon which each team described 1-3 SDGs that their project contributes to, and how the project achieves this. Cornell iGEM’s slide is exhibited below.
+            <br>
+            <img src="images/collab/info.png" style="width: 80%; height: 80%;">
+          </p>
         </div>
-        <!------------------------ STANDARD PAGE CONTENT END ------------------------>
       </div>
-      <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
-      <!------------------------ FOOTER START ------------------------>
-      <footer>
-        <div class="footer-wrapper">
-          <div class="icon-wrapper">
-            <a class="icon" href="http://facebook.com/cornelligem"><img
-                src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
-          </div>
-          <div class="icon-wrapper">
-            <a class="icon" href="http://twitter.com/cugem"><img
-                src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
-          </div>
-          <div class="icon-wrapper">
-            <a class="icon" href="https://www.instagram.com/cugem/"><img
-                src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
-          </div>
-          <div class="icon-wrapper icon-wrapper-last">
-            <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img
-                src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
-          </div>
-        </div>
-      </footer>
-      <!------------------------ FOOTER END ------------------------>
     </div>
+    <!------------------------ STANDARD PAGE CONTENT END ------------------------>
+  </div>
+  <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
+  <!------------------------ FOOTER START ------------------------>
+  <footer>
+    <div class="footer-wrapper">
+      <div class="icon-wrapper">
+        <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
+      </div>
+      <div class="icon-wrapper">
+        <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
+      </div>
+      <div class="icon-wrapper">
+        <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
+      </div>
+      <div class="icon-wrapper icon-wrapper-last">
+        <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!------------------------ FOOTER END ------------------------>
 </body>
 
 </html>
