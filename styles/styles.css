@@ -433,94 +433,50 @@ footer {
 
 /******************** TEAM PAGE START ********************/
 
-.team-page-banner {
-    background-color: #a0e0bd;
+.bios-row {
+  padding-bottom: 150px;
 }
 
-.team-page-content-area {
-    padding-top: 5%;
-    padding-bottom: 5%;
+.bios-images-left img {
+  width: 350px;
+  float: left;
+  padding-right: 50px;
 }
 
-.team-page-content-title {
-    font-size: 24px;
-    font-weight: 100;
-    color: #000;
-    padding-bottom: 5px;
+.bios-images-left {
+  width: 10%;
 }
 
-.team-page-content-subheading {
-    font-size: 18px;
-    font-weight: 1;
-    color: #000;
-    padding-top: 1%;
-    padding-bottom: 0;
+.bios-images-right img {
+  width: 350px;
+  float: right;
+  padding-left: 50px;
 }
 
-p.team-page-content-text {
-    font-size: 16px;
-    font-weight: 100;
-    color: #000;
-    padding-top: 8%;
-    padding-bottom: 0;
+.bios-details-left {
+  float: left;
+  padding-right: 50px;
 }
 
-.team-page-content-image {
-    width: 85%;
-    height: 85%;
-    border-radius: 50%;
+.bios-details-right {
+  float: right;
+  padding-left: 50px;
 }
 
-.team-page-image-left {
-    float: left;
-    width: 40%;
-    padding-right: 50px;
-    padding-left: 10%;
-    box-sizing: border-box;
+.bio-name {
+  font-family: "Lato";
+  font-size: 26px;
 }
 
-.team-page-text-right {
-    float: left;
-    width: 55%;
-    padding: 50px;
-    padding-top: 0px;
-    margin-bottom: 10%;
-    box-sizing: border-box;
+.bio-major {
+  font-family: "Lato";
+  font-size: 18px;
 }
 
-.team-page-text-left {
-    float: right;
-    width: 55%;
-    padding: 50px;
-    padding-top: 0px;
-    margin-bottom: 10%;
-    box-sizing: border-box;
+.bio-text {
+  font-family: "PT Serif";
+  font-size: 16px;
 }
-
-.team-page-image-right {
-    float: right;
-    width: 40%;
-    padding-left: 50px;
-    padding-right: 10%;
-    box-sizing: border-box;
-}
-
-.team-page-image-left-lastbio {
-    float: left;
-    width: 40%;
-    padding-right: 50px;
-    padding-left: 10%;
-    box-sizing: border-box;
-}
-
-.team-page-text-right-lastbio {
-    float: left;
-    width: 55%;
-    padding: 50px;
-    padding-top: 0px;
-    box-sizing: border-box;
-}
-
 
 /******************** TEAM PAGE END ********************/
 
