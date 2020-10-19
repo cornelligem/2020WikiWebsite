@@ -1,247 +1,271 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
-       /* hides "Team:Cornell" and iGEM logo */
-       #top_title {
-           display: none;
-       }
+    /* hides "Team:Cornell" and iGEM logo */
+    #top_title {
+      display: none;
+    }
 
-       /* removes padding below footer */
-       #globalWrapper {
-           padding: 0;
-       }
+    /* removes padding below footer */
+    #globalWrapper {
+      padding: 0;
+    }
 
-       #content {
-           padding: 0px;
-           width: 100% !important;
-           margin-top: 0px;
-           margin-left: 0px ;
-       }
+    #content {
+      padding: 0px;
+      width: 100% !important;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
 
-       /* removes default styling for home banner tagline */
-       #HQ_page p {
-           font-family: 'Open San', sans-serif;
-           font-size: 16px;
-           font-weight: 100;
-           color: #000;
-           padding-top: 0;
-           padding-bottom: 0;
-       }
+    /* removes default styling for home banner tagline */
+    #HQ_page p {
+      font-family: 'Open San', sans-serif;
+      font-size: 16px;
+      font-weight: 100;
+      color: #000;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
-       /* removes small extra margin at very bottom below footer */
-       p {
-           margin: 0;
-       }
+    /* removes small extra margin at very bottom below footer */
+    p {
+      margin: 0;
+    }
 
-       /* removes bullets from Toolkit dropdown menu */
-       ul {
-           list-style-image: none;
-       }
-
-   </style>
-    <title>Team:Cornell - 2020.igem.org</title>
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/grids.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
-            $('body').scroll( function(){
-                /* Check the location of each desired element */
-            $('.standard-page-side-bar-content-wrapper').each( function(i){
-                    var top_of_object = $(this).position().top;
-                    var top_of_window = $(window).scrollTop();
-                    /* If the object is completely visible in the window, fade it it */
-                    if( (top_of_window > top_of_object)){
-                        console.log("HELLO");
-                    $('.standard-page-side-bar-wrapper').css({'position':'fixed', 'display':'block'});
-                    }
-                    if ((top_of_window < top_of_object)){
-                        $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
-                    }
-                });
+    /* removes bullets from Toolkit dropdown menu */
+    ul {
+      list-style-image: none;
+    }
+  </style>
+  <title>Team:Cornell - 2020.igem.org</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/grids.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.standard-page-side-bar-wrapper').css({
+        'position': 'fixed',
+        'display': 'none'
+      });
+      $('body').scroll(function() {
+        /* Check the location of each desired element */
+        $('.standard-page-side-bar-content-wrapper').each(function(i) {
+          var top_of_object = $(this).position().top;
+          var top_of_window = $(window).scrollTop();
+          /* If the object is completely visible in the window, fade it it */
+          if ((top_of_window > top_of_object)) {
+            console.log("HELLO");
+            $('.standard-page-side-bar-wrapper').css({
+              'position': 'fixed',
+              'display': 'block'
             });
+          }
+          if ((top_of_window < top_of_object)) {
+            $('.standard-page-side-bar-wrapper').css({
+              'position': 'fixed',
+              'display': 'none'
+            });
+          }
         });
-    </script>
+      });
+    });
+  </script>
 
 </head>
 <!--NOTE: REMEMBER TO CHANCE active-page CLASS TO CORRECT DROPDOWN-->
-<body>
-    <div class ="standard-page-wrapper">
-      <!------------------------ NAV BAR START ------------------------>
-      <nav>
-          <div class="nav-bar-wrapper">
-              <div class="nav-bar-main-menu">
-                <a href="index.html"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
-                  <div class="dropdown">
-                      <button class="dropbtn">TEAM</button>
-                      <div class="dropdown-content team-dropdown-content">
-                          <a href="bios.html">BIOS</a>
-                          <a href="sponsors.html">SPONSORS</a>
-                          <a href="attributions.html">ATTRIBUTIONS</a>
-                      </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn">OUTREACH</button>
-                      <div class="dropdown-content outreach-dropdown-content">
-                          <a href="education.html">EDUCATION & ENGAGEMENT</a>
-                          <a href="collabs.html">COLLABORATIONS</a>
-                      </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn active-nav">HUMAN PRACTICES</button>
-                      <div class="dropdown-content human-dropdown-content">
-                          <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
-                          <a href="policies.html">POLICIES</a>
-                          <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
-                      </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn">PRODUCT DEVELOPMENT</button>
-                          <div class="dropdown-content human-dropdown-content">
-                              <a href="modeling.html">MODELING</a>
-                              <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
-                              <a href="hardware.html">HARDWARE</a>
-                              <a href="implementation.html">IMPLEMENTATION</a>
-                          </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn">TOOLKIT</button>
-                      <div class="dropdown-content toolkit-dropdown-content">
-                          <ul>
-                              <div class="nav-first-col">
-                                  <li class="wet-lab-list-title"><b>WET LAB</b></li>
-                                  <li><a href="foundation.html">FOUNDATIONS</a></li>
-                                  <li><a href="demonstrate.html">DEMONSTRATE</a></li>
-                                  <li><a href="part.html">PARTS</a></li>
-                                  <li><a href="basic_part.html">BASIC PARTS</a></li>
-                                  <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
-                              </div>
-                              <div class="nav-second-col">
-                                  <li class="pd-list-title"><b>DOCUMENTATION</b></li>
-                                  <li><a href="notebook.html">NOTEBOOK</a></li>
-                                  <li><a href="safety.html">SAFETY</a></li>
-                                  <li><a href="contribution.html">CONTRIBUTION</a></li>
-                              </div>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn"
-                          onclick="location.href='description.html'">DESCRIPTION</button>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn"
-                          onclick="location.href='index.html'">HOME</button>
-                  </div>
-              </div>
-          </div>
-      </nav>
-      <!------------------------ NAV BAR END ------------------------->
-        <!------------------------ STANDARD PAGE BANNER START ------------------------>
-        <header class="standard-page-banner">
-          <img class="standard-page-banner" src="images/banners/entrepreneuership.png" alt="entrepreneurship banner">
-        </header>
-        <!------------------------ STANDARD PAGE BANNER END ------------------------>
-        <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
-        <div class="standard-page-side-bar-content-wrapper">
-            <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
-            <div class="standard-page-side-bar-wrapper">
-                <ul class="standard-page-side-bar">
-                    <li><a href="#pageheading1">Subheading 1</a></li>
-                    <li><a href="#pageheading2">Subheading 2</a></li>
-                    <li><a href="#pageheading3">Subheading 3</a></li>
-                </ul>
-            </div>
-            <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
-            <!------------------------ STANDARD PAGE CONTENT START ------------------------>
-            <div class="standard-page-content-wrapper">
-                <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading1">Header</div></div>
 
-                    <div class="standard-page-content-subheading"></div>
-                    <p class="standard-page-content-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Mauris a faucibus sem, sit amet lobortis ligula.
-                         Curabitur felis arcu, consequat fingilla nibh nec,
-                         tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                          vitae lorem vel, porta maximus neque. Donec viverra
-                          magna sit amet sapien elementum, vitae faucibus.
-                    </p>
-                    <p class="standard-page-content-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Mauris a faucibus sem, sit amet lobortis ligula.
-                         Curabitur felis arcu, consequat fingilla nibh nec,
-                         tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                          vitae lorem vel, porta maximus neque. Donec viverra
-                          magna sit amet sapien elementum, vitae faucibus.
-                    </p>
-                </div>
-                <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading2">Header</div></div>
-                    <div class="standard-page-content-subheading"></div>
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    </p>
-                </div>
-                <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading3">Header</div></div>
-                    <div class="standard-page-content-subheading">Problem Statement</div>
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    <img class="standard-page-content-image" src="">
-                </div>
+<body>
+  <div class="standard-page-wrapper">
+    <!------------------------ NAV BAR START ------------------------>
+    <nav>
+      <div class="nav-bar-wrapper">
+        <div class="nav-bar-main-menu">
+          <a href="index.html"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
+            <div class="dropdown">
+              <button class="dropbtn">TEAM</button>
+              <div class="dropdown-content team-dropdown-content">
+                <a href="bios.html">BIOS</a>
+                <a href="sponsors.html">SPONSORS</a>
+                <a href="attributions.html">ATTRIBUTIONS</a>
+              </div>
             </div>
-            <!------------------------ STANDARD PAGE CONTENT END ------------------------>
+            <div class="dropdown">
+              <button class="dropbtn">OUTREACH</button>
+              <div class="dropdown-content outreach-dropdown-content">
+                <a href="education.html">EDUCATION & ENGAGEMENT</a>
+                <a href="collabs.html">COLLABORATIONS</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn active-nav">HUMAN PRACTICES</button>
+              <div class="dropdown-content human-dropdown-content">
+                <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
+                <a href="policies.html">POLICIES</a>
+                <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">PRODUCT DEVELOPMENT</button>
+              <div class="dropdown-content human-dropdown-content">
+                <a href="modeling.html">MODELING</a>
+                <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                <a href="hardware.html">HARDWARE</a>
+                <a href="implementation.html">IMPLEMENTATION</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">TOOLKIT</button>
+              <div class="dropdown-content toolkit-dropdown-content">
+                <ul>
+                  <div class="nav-first-col">
+                    <li class="wet-lab-list-title"><b>WET LAB</b></li>
+                    <li><a href="foundation.html">FOUNDATIONS</a></li>
+                    <li><a href="demonstrate.html">DEMONSTRATE</a></li>
+                    <li><a href="part.html">PARTS</a></li>
+                    <li><a href="basic_part.html">BASIC PARTS</a></li>
+                    <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
+                  </div>
+                  <div class="nav-second-col">
+                    <li class="pd-list-title"><b>DOCUMENTATION</b></li>
+                    <li><a href="notebook.html">NOTEBOOK</a></li>
+                    <li><a href="safety.html">SAFETY</a></li>
+                    <li><a href="contribution.html">CONTRIBUTION</a></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="location.href='description.html'">DESCRIPTION</button>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="location.href='index.html'">HOME</button>
+            </div>
         </div>
-        <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
-        <!------------------------ FOOTER START ------------------------>
-        <footer>
-            <div class="footer-wrapper">
-                <div class="icon-wrapper">
-                    <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
-                </div>
-                <div class="icon-wrapper icon-wrapper-last">
-                    <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
-                </div>
-            </div>
-        </footer>
-        <!------------------------ FOOTER END ------------------------>
+      </div>
+    </nav>
+    <!------------------------ NAV BAR END ------------------------->
+    <!------------------------ STANDARD PAGE BANNER START ------------------------>
+    <header class="standard-page-banner">
+      <img class="standard-page-banner" src="images/banners/entrepreneuership.png" alt="entrepreneurship banner">
+    </header>
+    <!------------------------ STANDARD PAGE BANNER END ------------------------>
+    <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
+    <div class="standard-page-side-bar-content-wrapper">
+      <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
+      <div class="standard-page-side-bar-wrapper">
+        <ul class="standard-page-side-bar">
+          <li><a href="#pageheading1">Market Analysis</a></li>
+          <li><a href="#pageheading2">Product Comparison</a></li>
+          <li><a href="#pageheading3">Future Development</a></li>
+        </ul>
+      </div>
+      <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
+      <!------------------------ STANDARD PAGE CONTENT START ------------------------>
+      <div class="standard-page-content-wrapper">
+        <div class="standard-page-content-section">
+          <div class="standard-page-content-title">
+            <div id="pageheading1">Market Analysis</div>
+          </div>
+          <hr class="yellow-accent-line-left">
+          <br>
+          <br>
+          <div class="standard-page-content-subheading">Strength</div>
+          <p class="standard-page-content-text">
+            Lumicure is a low toxicity, high-specificity treatment for targets that are most deleterious to fast-growing cancer cells. Our system employs a prolonged treatment effect, rather than a single-time drug delivery mechanism. This means that
+            the patient will only incur the one-time cost of implementing the system, rather than individual, expensive doses. Bacteriotherapy also treats metastatic cancer more effectively than current therapies because of its adaptive nature.
+            Although metastases are not always detected through a CT scan, the cancer could still be treated by Lumicure because the bacteria can settle into smaller tumors and still produce a therapeutic protein. Our treatment also uses a
+            sophisticated, non-invasive method to detect the E. coli in the body through fluorescence detection.
+          </p>
+          <div class="standard-page-content-subheading">Weaknesses</div>
+          <p class="standard-page-content-text">
+            Universal acceptance of bacteria as a treatment medium stands as a barrier to the use of our system. Bacteriotherapy also requires the tumor to be significant in size before the treatment can be employed. Much more research and testing
+            must be performed on a clinical level, and the treatment may potentially be limited to a small range of cancers.
+          </p>
+          <div class="standard-page-content-subheading">Opportunities</div>
+          <p class="standard-page-content-text">
+            Lumicure’s bacteriotherapy treatment is a viable alternative to late stage treatment drugs, which are toxic and have many detrimental side effects. In terms of profitability, the market of individuals in need of cancer treatment is
+            ever-growing, and the cost of cancer therapeutics is constantly increasing as well. There is the possibility of expanding Lumicure to treat other types of cancers, such as colon cancer, brain cancer, and liver cancer.
+          </p>
+          <div class="standard-page-content-subheading">Threats</div>
+          <p class="standard-page-content-text">
+            Our treatment has yet to be approved by the FDA. Furthermore, improving tumor detection mechanisms throughout the industry have also curbed the need for complex drug delivery systems like those employed by our company. Perhaps the system may be unviable due to associated costs of monitoring and purchases of complex equipment to fully utilize our system.
+          </p>
+        </div>
+        <!-- DONE UNTIL HERE -->
+        <div class="standard-page-content-section">
+          <div class="standard-page-content-title">
+            <div id="pageheading2">Product Comparison</div>
+          </div>
+          <hr class="yellow-accent-line-left">
+          <br>
+          <br>
+          <div class="standard-page-content-subheading"></div>
+          <p class="standard-page-content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris a faucibus sem, sit amet lobortis ligula.
+            Curabitur felis arcu, consequat fingilla nibh nec,
+            tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
+            vitae lorem vel, porta maximus neque. Donec viverra
+            magna sit amet sapien elementum, vitae faucibus.
+          <p class="standard-page-content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris a faucibus sem, sit amet lobortis ligula.
+            Curabitur felis arcu, consequat fingilla nibh nec,
+            tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
+            vitae lorem vel, porta maximus neque. Donec viverra
+            magna sit amet sapien elementum, vitae faucibus.
+          <p class="standard-page-content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris a faucibus sem, sit amet lobortis ligula.
+            Curabitur felis arcu, consequat fingilla nibh nec,
+            tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
+            vitae lorem vel, porta maximus neque. Donec viverra
+            magna sit amet sapien elementum, vitae faucibus.
+          </p>
+        </div>
+        <div class="standard-page-content-section">
+          <div class="standard-page-content-title">
+            <div id="pageheading3">Header</div>
+          </div>
+          <div class="standard-page-content-subheading">Problem Statement</div>
+          <p class="standard-page-content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris a faucibus sem, sit amet lobortis ligula.
+            Curabitur felis arcu, consequat fingilla nibh nec,
+            tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
+            vitae lorem vel, porta maximus neque. Donec viverra
+            magna sit amet sapien elementum, vitae faucibus.
+            <img class="standard-page-content-image" src="">
+        </div>
+      </div>
+      <!------------------------ STANDARD PAGE CONTENT END ------------------------>
     </div>
+    <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
+    <!------------------------ FOOTER START ------------------------>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="icon-wrapper">
+          <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
+        </div>
+        <div class="icon-wrapper">
+          <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
+        </div>
+        <div class="icon-wrapper">
+          <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
+        </div>
+        <div class="icon-wrapper icon-wrapper-last">
+          <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
+        </div>
+      </div>
+    </footer>
+    <!------------------------ FOOTER END ------------------------>
+  </div>
 </body>
 
 </html>
