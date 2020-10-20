@@ -1,247 +1,567 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
-       /* hides "Team:Cornell" and iGEM logo */
-       #top_title {
-           display: none;
-       }
+    /* hides "Team:Cornell" and iGEM logo */
+    #top_title {
+      display: none;
+    }
 
-       /* removes padding below footer */
-       #globalWrapper {
-           padding: 0;
-       }
+    /* removes padding below footer */
+    #globalWrapper {
+      padding: 0;
+    }
 
-       #content {
-           padding: 0px;
-           width: 100% !important;
-           margin-top: 0px;
-           margin-left: 0px ;
-       }
+    #content {
+      padding: 0px;
+      width: 100% !important;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
 
-       /* removes default styling for home banner tagline */
-       #HQ_page p {
-           font-family: 'Open San', sans-serif;
-           font-size: 16px;
-           font-weight: 100;
-           color: #000;
-           padding-top: 0;
-           padding-bottom: 0;
-       }
+    /* removes default styling for home banner tagline */
+    #HQ_page p {
+      font-family: 'Open San', sans-serif;
+      font-size: 16px;
+      font-weight: 100;
+      color: #000;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
-       /* removes small extra margin at very bottom below footer */
-       p {
-           margin: 0;
-       }
+    /* removes small extra margin at very bottom below footer */
+    p {
+      margin: 0;
+    }
 
-       /* removes bullets from Toolkit dropdown menu */
-       ul {
-           list-style-image: none;
-       }
-
-   </style>
-    <title>Team:Cornell - 2020.igem.org</title>
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/grids.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- JS -->
-     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
-            $('body').scroll( function(){
-                /* Check the location of each desired element */
-            $('.standard-page-side-bar-content-wrapper').each( function(i){
-                    var top_of_object = $(this).position().top;
-                    var top_of_window = $(window).scrollTop();
-                    /* If the object is completely visible in the window, fade it it */
-                    if( (top_of_window > top_of_object)){
-                        console.log("HELLO");
-                    $('.standard-page-side-bar-wrapper').css({'position':'fixed', 'display':'block'});
-                    }
-                    if ((top_of_window < top_of_object)){
-                        $('.standard-page-side-bar-wrapper').css({'position':'fixed' , 'display':'none'});
-                    }
-                });
+    /* removes bullets from Toolkit dropdown menu */
+    ul {
+      list-style-image: none;
+    }
+  </style>
+  <title>Team:Cornell - 2020.igem.org</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/grids.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.standard-page-side-bar-wrapper').css({
+        'position': 'fixed',
+        'display': 'none'
+      });
+      $('body').scroll(function() {
+        /* Check the location of each desired element */
+        $('.standard-page-side-bar-content-wrapper').each(function(i) {
+          var top_of_object = $(this).position().top;
+          var top_of_window = $(window).scrollTop();
+          /* If the object is completely visible in the window, fade it it */
+          if ((top_of_window > top_of_object)) {
+            console.log("HELLO");
+            $('.standard-page-side-bar-wrapper').css({
+              'position': 'fixed',
+              'display': 'block'
             });
+          }
+          if ((top_of_window < top_of_object)) {
+            $('.standard-page-side-bar-wrapper').css({
+              'position': 'fixed',
+              'display': 'none'
+            });
+          }
         });
-    </script>
+      });
+    });
+  </script>
 
 </head>
 <!--NOTE: REMEMBER TO CHANCE active-page CLASS TO CORRECT DROPDOWN-->
-<body>
-    <div class ="standard-page-wrapper">
-      <!------------------------ NAV BAR START ------------------------>
-      <nav>
-          <div class="nav-bar-wrapper">
-              <div class="nav-bar-main-menu">
-                <a href="index.html"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
-                  <div class="dropdown">
-                      <button class="dropbtn">TEAM</button>
-                      <div class="dropdown-content team-dropdown-content">
-                          <a href="bios.html">BIOS</a>
-                          <a href="sponsors.html">SPONSORS</a>
-                          <a href="attributions.html">ATTRIBUTIONS</a>
-                      </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn">OUTREACH</button>
-                      <div class="dropdown-content outreach-dropdown-content">
-                          <a href="education.html">EDUCATION & ENGAGEMENT</a>
-                          <a href="collabs.html">COLLABORATIONS</a>
-                      </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn">HUMAN PRACTICES</button>
-                      <div class="dropdown-content human-dropdown-content">
-                          <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
-                          <a href="policies.html">POLICIES</a>
-                          <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
-                      </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn active-nav">PRODUCT DEVELOPMENT</button>
-                          <div class="dropdown-content human-dropdown-content">
-                              <a href="modeling.html">MODELING</a>
-                              <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
-                              <a href="hardware.html">HARDWARE</a>
-                              <a href="implementation.html">IMPLEMENTATION</a>
-                          </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn">TOOLKIT</button>
-                      <div class="dropdown-content toolkit-dropdown-content">
-                          <ul>
-                              <div class="nav-first-col">
-                                  <li class="wet-lab-list-title"><b>WET LAB</b></li>
-                                  <li><a href="foundation.html">FOUNDATIONS</a></li>
-                                  <li><a href="demonstrate.html">DEMONSTRATE</a></li>
-                                  <li><a href="part.html">PARTS</a></li>
-                                  <li><a href="basic_part.html">BASIC PARTS</a></li>
-                                  <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
-                              </div>
-                              <div class="nav-second-col">
-                                  <li class="pd-list-title"><b>DOCUMENTATION</b></li>
-                                  <li><a href="notebook.html">NOTEBOOK</a></li>
-                                  <li><a href="safety.html">SAFETY</a></li>
-                                  <li><a href="contribution.html">CONTRIBUTION</a></li>
-                              </div>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn"
-                          onclick="location.href='description.html'">DESCRIPTION</button>
-                  </div>
-                  <div class="dropdown">
-                      <button class="dropbtn"
-                          onclick="location.href='index.html'">HOME</button>
-                  </div>
-              </div>
-          </div>
-      </nav>
-      <!------------------------ NAV BAR END ------------------------->
-        <!------------------------ STANDARD PAGE BANNER START ------------------------>
-        <header class="standard-page-banner">
-          <img class="standard-page-banner" src="images/banners/modeling.png" alt="modeling banner">
-        </header>
-        <!------------------------ STANDARD PAGE BANNER END ------------------------>
-        <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
-        <div class="standard-page-side-bar-content-wrapper">
-            <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
-            <div class="standard-page-side-bar-wrapper">
-                <ul class="standard-page-side-bar">
-                    <li><a href="#pageheading1">Subheading 1</a></li>
-                    <li><a href="#pageheading2">Subheading 2</a></li>
-                    <li><a href="#pageheading3">Subheading 3</a></li>
-                </ul>
-            </div>
-            <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
-            <!------------------------ STANDARD PAGE CONTENT START ------------------------>
-            <div class="standard-page-content-wrapper">
-                <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading1">Header</div></div>
 
-                    <div class="standard-page-content-subheading"></div>
-                    <p class="standard-page-content-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Mauris a faucibus sem, sit amet lobortis ligula.
-                         Curabitur felis arcu, consequat fingilla nibh nec,
-                         tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                          vitae lorem vel, porta maximus neque. Donec viverra
-                          magna sit amet sapien elementum, vitae faucibus.
-                    </p>
-                    <p class="standard-page-content-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Mauris a faucibus sem, sit amet lobortis ligula.
-                         Curabitur felis arcu, consequat fingilla nibh nec,
-                         tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                          vitae lorem vel, porta maximus neque. Donec viverra
-                          magna sit amet sapien elementum, vitae faucibus.
-                    </p>
-                </div>
-                <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading2">Header</div></div>
-                    <div class="standard-page-content-subheading"></div>
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    </p>
-                </div>
-                <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading3">Header</div></div>
-                    <div class="standard-page-content-subheading">Problem Statement</div>
-                    <p class="standard-page-content-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Mauris a faucibus sem, sit amet lobortis ligula.
-                       Curabitur felis arcu, consequat fingilla nibh nec,
-                       tincidunt pellentesque augue. Sed arcu nisl, tinciddunt
-                        vitae lorem vel, porta maximus neque. Donec viverra
-                        magna sit amet sapien elementum, vitae faucibus.
-                    <img class="standard-page-content-image" src="">
-                </div>
+<body>
+  <div class="standard-page-wrapper">
+    <!------------------------ NAV BAR START ------------------------>
+    <nav>
+      <div class="nav-bar-wrapper">
+        <div class="nav-bar-main-menu">
+          <a href="index.html"><img class="nav-bar-logo" src="images/cornell-igem-logo-white.png" alt="logo"></img>
+            <div class="dropdown">
+              <button class="dropbtn">TEAM</button>
+              <div class="dropdown-content team-dropdown-content">
+                <a href="bios.html">BIOS</a>
+                <a href="sponsors.html">SPONSORS</a>
+                <a href="attributions.html">ATTRIBUTIONS</a>
+              </div>
             </div>
-            <!------------------------ STANDARD PAGE CONTENT END ------------------------>
+            <div class="dropdown">
+              <button class="dropbtn">OUTREACH</button>
+              <div class="dropdown-content outreach-dropdown-content">
+                <a href="education.html">EDUCATION & ENGAGEMENT</a>
+                <a href="collabs.html">COLLABORATIONS</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">HUMAN PRACTICES</button>
+              <div class="dropdown-content human-dropdown-content">
+                <a href="practicesfinal.html">INTEGRATED PRACTICES</a>
+                <a href="policies.html">POLICIES</a>
+                <a href="entrepreneurship.html">ENTREPRENEURSHIP</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn active-nav">PRODUCT DEVELOPMENT</button>
+              <div class="dropdown-content human-dropdown-content">
+                <a href="modeling.html">MODELING</a>
+                <a href="engineeringsuccess.html">ENGINEERING SUCCESS</a>
+                <a href="hardware.html">HARDWARE</a>
+                <a href="implementation.html">IMPLEMENTATION</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">TOOLKIT</button>
+              <div class="dropdown-content toolkit-dropdown-content">
+                <ul>
+                  <div class="nav-first-col">
+                    <li class="wet-lab-list-title"><b>WET LAB</b></li>
+                    <li><a href="foundation.html">FOUNDATIONS</a></li>
+                    <li><a href="demonstrate.html">DEMONSTRATE</a></li>
+                    <li><a href="part.html">PARTS</a></li>
+                    <li><a href="basic_part.html">BASIC PARTS</a></li>
+                    <li><a href="composite_parts.html">COMPOSITE PARTS</a></li>
+                  </div>
+                  <div class="nav-second-col">
+                    <li class="pd-list-title"><b>DOCUMENTATION</b></li>
+                    <li><a href="notebook.html">NOTEBOOK</a></li>
+                    <li><a href="safety.html">SAFETY</a></li>
+                    <li><a href="contribution.html">CONTRIBUTION</a></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="location.href='description.html'">DESCRIPTION</button>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="location.href='index.html'">HOME</button>
+            </div>
         </div>
-        <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
-        <!------------------------ FOOTER START ------------------------>
-        <footer>
-            <div class="footer-wrapper">
-                <div class="icon-wrapper">
-                    <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
-                </div>
-                <div class="icon-wrapper icon-wrapper-last">
-                    <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
-                </div>
-            </div>
-        </footer>
-        <!------------------------ FOOTER END ------------------------>
+      </div>
+    </nav>
+    <!------------------------ NAV BAR END ------------------------->
+    <!------------------------ STANDARD PAGE BANNER START ------------------------>
+    <header class="standard-page-banner">
+      <img class="standard-page-banner" src="images/banners/modeling.png" alt="modeling banner">
+    </header>
+    <!------------------------ STANDARD PAGE BANNER END ------------------------>
+    <!------------------------ STANDARD PAGE SIDE BAR + CONTENT START ------------------------>
+    <div class="standard-page-side-bar-content-wrapper">
+      <!------------------------ STANDARD PAGE SIDE BAR START ------------------------>
+      <div class="standard-page-side-bar-wrapper">
+        <ul class="standard-page-side-bar">
+          <li><a href="#pageheading1">Holin-Antiholin Kill Switch</a></li>
+          <li><a href="#pageheading2">Growth Modeling</a></li>
+          <li><a href="#pageheading3">Trichosanthin Therapeutic</a></li>
+          <li><a href="#pageheading4">mCardinal</a></li>
+          <li><a href="#pageheading5">References</a></li>
+        </ul>
+      </div>
+      <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
+      <!------------------------ STANDARD PAGE CONTENT START ------------------------>
+      <div class="standard-page-content-wrapper">
+        <div class="standard-page-content-section">
+          <p class="standard-page-content-text">
+            Note: All MATLAB scripts corresponding for each of the models can be found at the following repository: <a href="https://github.com/cornelligem/2020WetLabModelingCode">https://github.com/cornelligem/2020WetLabModelingCode</a>.
+          </p>
+          <div class="standard-page-content-title">
+            <div id="pageheading1">Holin-Antiholin Kill Switch</div>
+          </div>
+          <hr class="yellow-accent-line-left">
+          <br>
+          <br>
+          <p class="standard-page-content-text">
+            The following three differential equations were used to model our holin-antiholin
+            kill switch. We assumed the following: the expression rate of a constitutive
+            promoter is equal to that of the lactate-inducible promoter in an infinite-lactate
+            environment; the protein products degrade according to a first order reaction; the
+            holin-antiholin dimer forms according to a second order reaction; the lactate concentration
+            in the tumor environment is constant. For the kill switch and all other protein production
+            modeling, maturation time and efficiency were neglected.
+          </p>
+          <div class="standard-page-content-subheading" style="font-weight: 1000">Antiholin differential equation</div>
+          <br>
+          <p class="standard-page-content-text">
+            The first equation represents the rate at which the antitoxin,
+            antiholin, is being produced. The terms respectively represent: expression
+            from the lactate promoter, removal due to degradation, removal due to the
+            binding to holin (to form the inactivated holin-antiholin dimer), and addition
+            due to dissociation of the holin-antiholin dimer. A strong promoter was used to
+            encourage the therapeutic bacteria to survive in high lactate levels.
+          </p>
+          <img src="images/modeling/dAntitoxin_dt.png" style="width: 100%; height: 100%;">
+          <br>
+          <div class="standard-page-content-subheading" style="font-weight: 1000">Holin differential equation</div>
+          <br>
+          <p class="standard-page-content-text">
+            The second equation represents the rate at which the toxin, holin, is
+            being produced. The terms respectively represent: the expression from
+            the constitutive promoter, removal due to degradation, removal due to
+            binding to antiholin (to form the inactivated holin-antiholin dimer),
+            and addition due to disassociation of the holin from the holin-antiholin
+            dimer. To better distinguish expression at low and high lactate levels, a
+            weak promoter was used.
+          </p>
+          <img src="images/modeling/dToxin_dt.png" style="width: 100%; height: 100%;">
+          <br>
+          <div class="standard-page-content-subheading" style="font-weight: 1000">Toxin-antitoxin Dimer differential equation</div>
+          <br>
+          <p class="standard-page-content-text">
+            The third equation represents the net rate at which the holin-antiholin dimer is formed. The terms respectively represent: the reaction rate at which holin and antiholin bind, the rate at which the dimer disassociates, and the rate at
+            which the dimer degrades.
+          </p>
+          <img src="images/modeling/dDimer_dt.png" style="width: 100%; height: 100%;">
+          <br>
+          <table style="width: 100%;">
+            <caption>Table 1. Parameter Values for Holin-Antiholin Modeling</caption>
+            <tr>
+              <th>Variable</th>
+              <th>Parameter</th>
+              <th>Value</th>
+              <th>Source</th>
+            </tr>
+            <tr>
+              <td>[Antitoxin]</td>
+              <td>Conc. of antiholin</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>[Toxin]</td>
+              <td>Conc. of holin</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>[Dimer]</td>
+              <td>Conc. of toxin-antitoxin dimer
+                *inactivated toxin
+              </td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>f</td>
+              <td>Fluorescence scaling factor</td>
+              <td>= const. exp / (basA + a)
+                = (23.22 uM/min) / (7790 uM/min)
+                = 2.98 * 10<sup>-3</sup></td>
+              <td>[1][2]
+              </td>
+            </tr>
+            <tr>
+              <td>bas<sub>A</sub></td>
+              <td>Basal exp of lactate promoter</td>
+              <td>479.3 [uM/min]</td>
+              <td>[1]</td>
+            </tr>
+            <tr>
+              <td>K<sub>dA</sub></td>
+              <td>Dissociation constant of lactate from lactate promoter</td>
+              <td>1075 [uM]</td>
+              <td>[1]</td>
+            </tr>
+            <tr>
+              <td>n</td>
+              <td>Exponent</td>
+              <td>1.326</td>
+              <td>[1]</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>Induced expression scaling factor</td>
+              <td>7311 [uM/min]</td>
+              <td>[1]</td>
+            </tr>
+            <tr>
+              <td>d<sub>A</sub></td>
+              <td>Rate const, degradation of antitoxin</td>
+              <td>0.13 [min<sup>-1</sup>]</td>
+              <td>[3]</td>
+            </tr>
+            <tr>
+              <td>d<sub>T</sub></td>
+              <td>Rate const, degradation of toxin</td>
+              <td>0.0348 [min<sup>-1</sup>]</td>
+              <td>[4]</td>
+            </tr>
+            <tr>
+              <td>[Lac]</td>
+              <td>Lactate concentration</td>
+              <td>1 to 30 [mM]</td>
+              <td>[5]</td>
+            </tr>
+            <tr>
+              <td>k<sub>f</sub></td>
+              <td>Rate const, forward rxn: T + A ↔ TA </td>
+              <td>1.2 * 10<sup>-4</sup> [uM<sup>-1</sup>min<sup>-1</sup>]</td>
+              <td>[4]</td>
+            </tr>
+            <tr>
+              <td>k<sub>b</sub></td>
+              <td>Rate const, reverse rxn: T + A ↔ TA</td>
+              <td>0.3 * 10<sup>-4</sup> [min<sup>-1</sup>]</td>
+              <td>[4]</td>
+            </tr>
+            <tr>
+              <td>bas<sub>T</sub></td>
+              <td>Basal exp of weak constitutive promoter</td>
+              <td>23.22 uM/min for strong promoter J23100, scale by relative strength of J23108 * (1303 / 2547)= 11.87 [uM/min]</td>
+              <td>[3], [6]</td>
+            </tr>
+            <tr>
+              <td>d<sub>D</sub></td>
+              <td>Rate const, degradation of toxin-antitoxin dimer</td>
+              <td>0.0348 [min<sup>-1</sup>]</td>
+              <td>Estimated value from [4]</td>
+            </tr>
+          </table>
+        </div>
+        <div class="standard-page-content-section">
+          <div class="standard-page-content-title">
+            <div id="pageheading2">Growth Modeling</div>
+          </div>
+          <hr class="yellow-accent-line-left">
+          <br>
+          <br>
+          <p class="standard-page-content-text">
+            To predict the maximum Trichotherapy colonization for trichosanthin and mCardinal modeling, the typical bacterial density was approximated using existing literature. According to Duong et. al, bacteria can easily reproduce within the
+            tumor environment, reaching a concentration of 1 × 1010 CFU/g after three days [7]. According to Monte, there are approximately 1 × 108 cancer cells in every gram of tumor; these two values gives us an approximation of 100 E. coli cells
+            per tumor cells (assuming one CFU equals one cell) [8].
+            <br>
+            <br>
+            The logistic growth model from Zweitering et al. was modified to develop a function to give growth rate as a function of cell density[9]:
+          </p>
+          <img src="images/modeling/t_eff.png" style="width: 100%; height: 100%;">
+          <br>
+          <p class="standard-page-content-text">
+            The logistic growth equation was rearranged to get the effective time teff as a function of cell density y, where teff was used to find the instantaneous growth rate.
+          </p>
+          <img src="images/modeling/dCells_dt_eff.png" style="width: 100%; height: 100%;">
+          <p class="standard-page-content-text">
+            The following equation models the diffusion of our bacteria inside and outside a tumor environment using Fick’s Second Law [9]. Compared to bacteria growing outside of the tumor, bacteria inside the tumor would have a greater growth rate.
+            <br>
+            <br>
+            It was assumed that over the span of several weeks, the tumor size would not change significantly.
+            <br>
+            <br>
+            The boundary conditions were set according to the relative amount of vasculature in breast tissue, where the nearest blood vessel to the tumor was assumed to be 25 + 1/√30, since there are an average of 30 vessels/ mm2, then 1/√3 mm on
+            average per vessel [10]. Based on the results, we found that our treatment can potentially be effective in the long-term; one time administration of the treatment could allow the bacteria to constantly produce therapeutic until the tumor
+            shrinks and eventually disappears.
+            <br>
+            <br>
+            The initial conditions were set according to the injection, assuming that for any tumor, a total of 2e6 CFU (this was the maximum dosage before seeing some side effects [8]) were delivered evenly to the tumor site within a 0.2 mm radius
+            of the small tumor and 5mm for the large tumor, and all other parts of the tumor had zero initial concentration.
+          </p>
+          <div class="standard-page-content-subheading" style="font-weight: 1000">Growth modeling partial differential equation</div>
+          <br>
+          <img src="images/modeling/eq.png" style="width: 100%; height: 100%;">
+          <br>
+          <br>
+          <table style="width: 100%;">
+            <caption>Table 2. Parameter Values for Bacterial Growth Modeling</caption>
+            <tr>
+              <th>Variable</th>
+              <th>Parameter</th>
+              <th>Value</th>
+              <th>Source</th>
+            </tr>
+            <tr>
+              <td>Concentration**</td>
+              <td>c</td>
+              <td>Boundary and initial condition for injected bacteria concentration: 2e6/(r<sup>3</sup>) CFU/mm<sup>3</sup></td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Concentration of cells</td>
+              <td>[Cells]</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Radius</td>
+              <td>r</td>
+              <td>50000, 1000, 20000, (graph, inject, tumor) μm</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Diffusion Coefficient</td>
+              <td>D<sub>iff</sub></td>
+              <td>0.579 μm<sup>2</sup>/sec</td>
+              <td>[8]</td>
+            </tr>
+            <tr>
+              <td>Growth Rate In Tumor</td>
+              <td>𝜇<sub>I</sub></td>
+              <td>1.736 * 10<sup>-4</sup> sec<sup>-1</sup></td>
+              <td>[8]</td>
+            </tr>
+            <tr>
+              <td>Growth Rate Outside Tumor</td>
+              <td>𝜇<sub>O</sub></td>
+              <td>1.736 * 10<sup>-9</sup> sec<sup>-1</sup></td>
+              <td>Estimated from [7]</td>
+            </tr>
+            <tr>
+              <td>Maximum Density (used to find t<sub>eff</sub>)</td>
+              <td>A</td>
+              <td>10<sup>7</sup> CFU/mm<sup>3</sup></td>
+              <td>[7]</td>
+            </tr>
+          </table>
+        </div>
+        <div class="standard-page-content-section">
+          <div class="standard-page-content-title">
+            <div id="pageheading3">Trichosanthin Therapeutic</div>
+          </div>
+          <hr class="yellow-accent-line-left">
+          <br><br>
+          <p class="standard-page-content-text">
+            The following equation represents the production of trichosanthin protein within the bacteria. The first term represents the rate of translation, while the second represents protein degradation.
+          </p>
+          <div class="standard-page-content-subheading" style="font-weight: 1000">Trichosanthin protein differential equation</div>
+          <img src="images/modeling/dTrich_dt.png" style="width: 80%; height: 80%;">
+          <table style="width: 100%;">
+            <caption>Table 3. Parameter Values for Trichosanthin Modeling</caption>
+            <tr>
+              <th>Variable</th>
+              <th>Parameter</th>
+              <th>Value</th>
+              <th>Source</th>
+            </tr>
+            <tr>
+              <td>[Trich]</td>
+              <td>Concentration of trichosanthin</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>bas<sub>R</sub></td>
+              <td>Basal expression of constitutive promoter</td>
+              <td>0.387 μM/sec<sup>-1</sup></td>
+              <td>[2]</td>
+            </tr>
+            <tr>
+              <td>d<sub>r</sub></td>
+              <td>Degradation rate of trichosanthin</td>
+              <td>0.000385 sec<sup>-1</sup></td>
+              <td>[1]</td>
+            </tr>
+          </table>
+        </div>
+        <div class="standard-page-content-section">
+          <div class="standard-page-content-title">
+            <div id="pageheading4">mCardinal</div>
+          </div>
+          <hr class="yellow-accent-line-left">
+          <br><br>
+          <p class="standard-page-content-text">
+            In MATLAB, we modeled the output of the mCardinal protein using the following differential equation, and we solved it using MATLAB’s ode45 function. The equation represents the production of mCardinal protein. The first term represents
+            the basal expression under the constitutive promoter (BBa_J23100), while the second represents protein degradation.
+          </p>
+          <div class="standard-page-content-subheading" style="font-weight: 1000">mCardinal protein differential equation</div>
+          <img src="images/modeling/dMCard_dt.png" style="width: 80%; height: 80%;">
+          <table style="width: 100%;">
+            <caption>Table 3. Parameter Values for Trichosanthin Modeling</caption>
+            <tr>
+              <th>Variable</th>
+              <th>Parameter</th>
+              <th>Value</th>
+              <th>Source</th>
+            </tr>
+            <tr>
+              <td>[mCard]</td>
+              <td>Concentration of mCardinal</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>bas<sub>T</sub></td>
+              <td>Basal transcription rate</td>
+              <td>23.22 μM/min</td>
+              <td>[2]</td>
+            </tr>
+            <tr>
+              <td>d<sub>C</sub></td>
+              <td>Degradation rate of trichosanthin</td>
+              <td>0.0575 min<sup>-1</sup></td>
+              <td>[12]</td>
+            </tr>
+          </table>
+          <br>
+          <p class="standard-page-content-text">
+            Modeling related to Trichoscan can be found under Hardware (Link to Modeling section under Hardware).
+          </p>
+        </div>
+        <div class="standard-page-content-section">
+          <div class="standard-page-content-title">
+            <div id="pageheading5">References</div>
+          </div>
+          <hr class="yellow-accent-line-left">
+          <br>
+          <br>
+          <p class="standard-page-content-text">
+            [1] Fomitcheva, A. (2015). BBa_K1847009. Retrieved October 14, 2020, from http://parts.igem.org/Part:BBa_K1847009
+            <br>
+            [2] Yildirim, N., &amp; Mackey, M. C. (2003). Feedback Regulation in the Lactose Operon: A Mathematical Modeling Study and Comparison with Experimental Data. Biophysical Journal, 84(5), 2841-2851. doi:10.1016/s0006-3495(03)70013-7
+            <br>
+            [3] Guan, R. (2013). BBa_K1051208. Retrieved October 14, 2020, from http://parts.igem.org/Part:BBa_K1051208
+            <br>
+            [4] Kill Switch. (2013). Retrieved October 14, 2020, from http://2013.igem.org/KillSwitch
+            <br>
+            [5] Cruz-López, K. G., Castro-Muñoz, L. J., Reyes-Hernández, D. O., García-Carrancá, A., & Manzo-Merino, J. (2019). Lactate in the Regulation of Tumor Microenvironment and Therapeutic Approaches. Frontiers in Oncology, 9.
+            doi:10.3389/fonc.2019.01143
+            <br>
+            [6] Anderson, J. (2006). BBa_J23117. Retrieved October 14, 2020, from http://parts.igem.org/Part:BBa_J23117
+            <br>
+            [7] Duong, M.T., Qin, Y., You, S. et al. Bacteria-cancer interactions: bacteria-based cancer therapy. Exp Mol Med 51, 1–15 (2019). https://doi.org/10.1038/s12276-019-0297-0
+            <br>
+            [8] Toley, B. J., & Forbes, N. S. (2011). Motility is critical for effective distribution and accumulation of bacteria in tumor tissue. Integrative Biology, 4(2), 165-176. doi:10.1039/c2ib00091a
+            <br>
+            [9] Zwietering, M. H., Jongenburger, I., Rombouts, F. M., & Van't Riet, K. (1990). Modeling of the Bacterial Growth Curve. Applied and Environmental Microbiology, 56(6), 1875-1881.
+            <br>
+            [10] Forbes, N. S., Munn, L. L., Fukumura, D., &amp; Jain, R. K. (n.d.). Sparse initial entrapment of systemically injected Salmonella typhimurium leads to heterogeneous accumulation within tumors. Cancer Research, 63(17), 5188-5193.
+            <br>
+            [11] Rust, A., Partridge, L., Davletov, B., & Hautbergue, G. (2017). The Use of Plant-Derived Ribosome Inactivating Proteins in Immunotoxin Development: Past, Present and Future Generations. Toxins, 9(11), 344. doi:10.3390/toxins9110344
+            <br>
+            [12] Lambert, T. (n.d.). MCardinal at FPbase. Retrieved October 14, 2020, from https://www.fpbase.org/protein/mcardinal/
+
+          </p>
+        </div>
+      </div>
     </div>
+    <!------------------------ STANDARD PAGE CONTENT END ------------------------>
+  </div>
+  <!------------------------ STANDARD PAGE SIDE BAR + CONTENT END ------------------------>
+  <!------------------------ FOOTER START ------------------------>
+  <footer>
+    <div class="footer-wrapper">
+      <div class="icon-wrapper">
+        <a class="icon" href="http://facebook.com/cornelligem"><img src="https://2019.igem.org/wiki/images/4/44/T--Cornell--Facebook.png"></a>
+      </div>
+      <div class="icon-wrapper">
+        <a class="icon" href="http://twitter.com/cugem"><img src="https://2019.igem.org/wiki/images/8/80/T--Cornell--Twitter.png"></a>
+      </div>
+      <div class="icon-wrapper">
+        <a class="icon" href="https://www.instagram.com/cugem/"><img src="https://2019.igem.org/wiki/images/3/37/T--Cornell--Instagram.png"></a>
+      </div>
+      <div class="icon-wrapper icon-wrapper-last">
+        <a class="icon" href="https://www.youtube.com/channel/UCJt-5JfyoucUJXC1EsTllhg"><img src="https://2019.igem.org/wiki/images/3/3c/T--Cornell--Youtube.png"></a>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!------------------------ FOOTER END ------------------------>
 </body>
 
 </html>
