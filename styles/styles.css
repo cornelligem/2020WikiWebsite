@@ -618,8 +618,8 @@ footer {
 
 .inspiration-timeline::before {
     transform: translate(-50%, -52%);
-    height: 3100px;
-    top: 1600px;
+    height: 2750px;
+    top: 1420px;
 }
 
 .ideation-timeline::before {
