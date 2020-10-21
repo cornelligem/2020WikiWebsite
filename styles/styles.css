@@ -343,6 +343,14 @@ footer {
 
 /******************** STANDARD PAGE START ********************/
 
+.standard-page-content-wrapper {
+    margin-left: -10%;
+}
+
+.standard-page-content-wrapper p {
+  font-family: 'PT Serif';
+}
+
 .standard-page-side-bar-content-wrapper {
   margin-top: -5%;
 }
@@ -398,6 +406,11 @@ footer {
 
 /********************* PARTS PAGES START ********************/
 
+.parts-images {
+  padding-left: 20%;
+  width: 80%;
+}
+
 .parts-table table {
   border: 1px solid black;
 }
@@ -409,10 +422,7 @@ footer {
 }
 
 .parts-table {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-left: 6%;
 }
 
 .parts-table th {
@@ -424,11 +434,20 @@ footer {
 }
 
 .composite-table {
-  margin-left: -20%;
+  margin-left: -8%;
 }
 
 
 /******************* PARTS PAGES END **********************/
+
+/******************* SAFETY PAGE START **********************/
+
+.safety-content {
+  margin-left: -15%;
+  font-family: 'PT Serif';
+}
+
+/******************* SAFETY PAGE END **********************/
 
 
 /******************** TEAM PAGE START ********************/
