@@ -159,9 +159,10 @@
                 <ul class="standard-page-side-bar">
                     <li><a href="#pageheading1">Kill Switch</a></li>
                     <li><a href="#pageheading2">Florescence Detection</a></li>
-                    <li><a href="#pageheading3">Bacterial Growth</a></li>
-                    <li><a href="#pageheading4">Asd Obligate Gene</a></li>
-                    <li><a href="#pageheading5">Resources</a></li>
+                    <li><a href="#pageheading3">Therapeutic</a></li>
+                    <li><a href="#pageheading4">Bacterial Growth</a></li>
+                    <li><a href="#pageheading5">Asd Obligate Gene</a></li>
+                    <li><a href="#pageheading6">Resources</a></li>
                 </ul>
             </div>
             <!------------------------ STANDARD PAGE SIDE BAR END ------------------------>
@@ -193,6 +194,17 @@
                         Figure 4. At 30 mM, a high level of lactate (L) that would be expected in the tumor environment, the steady-state concentration of holin is 0.54 μM. The bacterial cell likely survives.
                     </p>
                     <p class="standard-page-content-text">
+                        A degradation tag is attached to the holin protein, which marks it for disposal and reduces its half-life in the cell.  This limits the activity of the holin toxin and prevents its buildup over time, allowing the bacterial population to survive indefinitely as long as it is within a high-lactate tumor environment.
+                        <img src="images/demonstrate/image_9.png">
+                        Figure 5. Comparison of the kill switch modeling with a degradation tag (top three plots) show a good distinction between cancerous and non-cancerous tissue. The kill switch without the degradation tag does not make this clear of a distinction (bottom). 
+                    </p>
+                    <p class="standard-page-content-text">
+                        With our improved holin part (ie. with degradation tag), there is good distinction between physiologically normal levels of lactate, and cancerous levels of lactate. In other words, with the degradation tag, the bacteria will survive in a tumor environment, and die in healthy tissue.
+                    </p>
+                    <p class="standard-page-content-text">
+                        However, without our improvement (ie. without degradation tag), as can be seen in the bottom panel of Figure 5, the holin concentration of all of them is between 0.65 uM and 0.75 uM for concentrations throughout 1 mM to 30 mM, both of which would allow survival. Since this range all allows for bacterial survival, this kill switch would not be specific to cancer tissue without the degradation tag. 
+                    </p>
+                    <p class="standard-page-content-text">
                         The purpose of our kill switch is to serve as a backup for immune selection, which generally destroys E. coli in most healthy tissues. However, the kill switch provides additional security that bacteria will localize and survive selectively in high-lactate environments such as tumor cells, and die in other environments like healthy human tissue. The figures above demonstrate the concentrations of holin, antiholin, and the inactivated holin-antiholin dimer at different levels of lactate. They reveal that the kill switch is sensitive to the differences between healthy and cancerous tissue.
                     </p>
                 </div>
@@ -201,16 +213,31 @@
                     <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
-                        Since  E. coli tend to localize to the interior of tumor cells [6], we decided to use an intracellular cancer therapeutic protein: trichosanthin, a weaker relative of the toxin ricin, is a small, ribosome-inactivating protein derived from the tuber vegetable Trichosanthes kirilowii, also known as the Chinese cucumber. It has traditionally been used in Eastern traditional medicine as an abortifacient, and also functions as an antitumor agent [7]. Trichosanthin works by inhibiting the 60S subunit of eukaryotic ribosomes, stopping protein synthesis in the (eukaryotic) tumor cells, eventually killing them. Because prokaryotic ribosomes are not affected by trichosanthin, the E. coli cells remain safe. It is produced constitutively by the engineered bacteria upon entry, and is exported into the cytoplasm of the tumor cells, inactivating mammalian ribosomes. Since trichosanthin acts by inhibiting protein synthesis, its cytotoxic effects will be most deleterious to fast-growing cancer cells [8]. Additionally, our addition of a translocase tag allows for more efficient export of trichosanthin from the bacteria into the cytoplasm of the tumor cell [9].
-                        <img src="images/demonstrate/image7.png">
-                        Figure 7. Trichosanthin is an inhibitor of protein synthesis that acts on mammalian ribosomes. Upon release into the cell, it exhibits RNA N-glycosidase activity and depurinates the 28S rRNA of the 60S eukaryotic ribosomal subunit. This will achieve irreversible inactivation of ribosome activity and inhibit tumor cell function.
+                        In order to determine the location of the E. coli in the body, our system takes advantage of a fluorescent reporter that can be detected by our sensing device, Tricho-scan. In this case, the fluorescent marker is mCardinal, a red fluorescent protein that absorbs 604 nm red light and emits 659 nm far red light [4]. We chose to use a red fluorescent protein due to the ease of detection; red light can best penetrate layers of the skin, far-red light is safer for long-term frequent use [5], and mCardinal is a relatively bright red fluorescent protein. Thus, Tricho-scan can determine the location of the bacteria.
+                        <img src="images/demonstrate/image3.png">
+                        Figure 6. mCardinal protein production process under a constitutive promoter. The mCardinal gene produces a fluorescent protein that absorbs light at a peak wavelength 604 nm and emits light at a 659 nm peak wavelength. Our models account for the translation rate and degradation rate of mCardinal. 
                     <p class="standard-page-content-text">
-                        Figure 8 shows that the E. coli are able to produce a sufficient concentration of trichosanthin to kill the cancer cells given that about one hundred bacteria will colonize in one cell according to our growth modeling. Each bacteria causes a concentration increase of 268 nM, which implicates a total of 26.8 μM of trichosanthin in the cancer cell, which is significantly higher than the IC50 of 1.57 μM. A breast cancer study in mice showed that trichosanthin administered intravenously at 0.185 μM significantly slowed cancer proliferation[9]. Since Trichotherapy applies a much higher concentration than this effective chemotherapy concentration as well as the IC50, it would likely destroy cancer cells and significantly reduce tumor size. We do not expect the high concentration to be harmful as our built-in kill switch is an added safety defense to limit bacterial spread outside of the tumor.
-                        <img src="images/demonstrate/image8.png">
-                        Figure 8. This plot depicts the concentrations of trichosanthin protein over time. Trichosanthin is exported into the cancer cell from the E. coli approximately three minutes after initial production. After five minutes, the trichosanthin in the cancer cell reaches a steady-state concentration of 268 nM per each bacterium inside the cell.
+                        The modeling of the mCardinal protein output in Figure 7 shows that the protein reaches a steady state concentration of 404 μM within each E. coli. At this concentration, our sensing device can detect the bacteria at a depth of around 20.1 mm.
+                        <img src="images/demonstrate/image9.png">
+                        Figure 7. This plot depicts the concentrations of mCardinal mRNA and translated mCardinal protein over time. mCardinal is produced continuously by E. coli; the concentration of mCardinal rises to a steady-state concentration of about 403 μM before its degradation rate matches its production rate. At this concentration, the protein’s fluorescence can be detected externally by the sensing device.
+                    </p>
                 </div>
                 <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading3">Bacterial Growth</div></div>
+                    <div class="standard-page-content-title"><div id="pageheading3">Therapeutic</div></div>
+                    <hr class="yellow-accent-line-left">
+                    <div class="standard-page-content-subheading"></div>
+                    <p class="standard-page-content-text">
+                        Since  E. coli tend to localize to the interior of tumor cells [6], we decided to use an intracellular cancer therapeutic protein: trichosanthin, a weaker relative of the toxin ricin, is a small, ribosome-inactivating protein derived from the tuber vegetable Trichosanthes kirilowii, also known as the Chinese cucumber. It has traditionally been used in Eastern traditional medicine as an abortifacient, and also functions as an antitumor agent [7]. Trichosanthin works by inhibiting the 60S subunit of eukaryotic ribosomes, stopping protein synthesis in the (eukaryotic) tumor cells, eventually killing them. Because prokaryotic ribosomes are not affected by trichosanthin, the E. coli cells remain safe. It is produced constitutively by the engineered bacteria upon entry, and is exported into the cytoplasm of the tumor cells, inactivating mammalian ribosomes. Since trichosanthin acts by inhibiting protein synthesis, its cytotoxic effects will be most deleterious to fast-growing cancer cells [8]. Additionally, our addition of a translocase tag allows for more efficient export of trichosanthin from the bacteria into the cytoplasm of the tumor cell [9].
+                        <img src="images/demonstrate/image_4.png">
+                        Figure 8. Trichosanthin is an inhibitor of protein synthesis that acts on mammalian ribosomes. Upon release into the cell, it exhibits RNA N-glycosidase activity and depurinates the 28S rRNA of the 60S eukaryotic ribosomal subunit. This will achieve irreversible inactivation of ribosome activity and inhibit tumor cell function.
+                    <p class="standard-page-content-text">
+                        Figure 9 shows that the E. coli are able to produce a sufficient concentration of trichosanthin to kill the cancer cells given that about one hundred bacteria will colonize in one cell according to our growth modeling. Each bacteria causes a concentration increase of 268 nM, which implicates a total of 26.8 μM of trichosanthin in the cancer cell, which is significantly higher than the IC50 of 1.57 μM. A breast cancer study in mice showed that trichosanthin administered intravenously at 0.185 μM significantly slowed cancer proliferation [9]. Since Trichotherapy applies a much higher concentration than this effective chemotherapy concentration as well as the IC50, it would likely destroy cancer cells and significantly reduce tumor size. We do not expect the high concentration to be harmful as our built-in kill switch is an added safety defense to limit bacterial spread outside of the tumor.
+                        <img src="images/demonstrate/image8.png">
+                        Figure 9. This plot depicts the concentrations of trichosanthin protein over time. Trichosanthin is exported into the cancer cell from the E. coli approximately three minutes after initial production. After five minutes, the trichosanthin in the cancer cell reaches a steady-state concentration of 268 nM per bacterium inside the cell.
+                    </p>
+                </div>
+                <div class="standard-page-content-section">
+                    <div class="standard-page-content-title"><div id="pageheading4">Bacterial Growth</div></div>
                     <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
@@ -227,24 +254,25 @@
                     <p class="standard-page-content-text">
                         The following graphs describe the growth of bacteria over time inside two different sizes of tumors. The x-axis moves away from the center of the tumor as the y-axis moves forward in time the further down the graph. Our scale measures the density of bacterial cells in the tumor ranging from 106 CFU/gram (indicated by the dark blue) to 1011 CFU/gram (indicated by the bright yellow). Our results suggest that the bacteria, and subsequently the therapeutic, are able to maintain a high cell density, which indicates that the bacteria do localize and live within the tumors. Though this model assumes negligible change in radius over a span of three weeks, the results also suggest that this treatment can work in the long-term; after just one injection, the bacteria will constantly make therapeutic over time, causing the tumor to shrink and eventually disappear. For the smaller tumor, the graph shows a further diffusion of bacteria outside the boundary of the tumor compared to the graph of the large tumor. This is due to the small radius of the tumor relative to the point of injection inside the tumor
                         <img src="images/demonstrate/image5.png">
-                        Figure 9. Upon injection into a large tumor with a 25 mm radius, bacteria reached a maximum density of 1010 CFU/gram and maintain a steady population throughout the tumor. Growth modeling showed a quick drop off of bacterial density at the edge of the tumor. The dotted vertical line depicts the point of injection, and the solid vertical line depicts the edge of the tumor.
+                        Figure 10. Upon injection into a large tumor with a 25 mm radius, bacteria reached a maximum density of 1010 CFU/gram and maintain a steady population throughout the tumor. Growth modeling showed a quick drop off of bacterial density at the edge of the tumor. The dotted vertical line depicts the point of injection, and the solid vertical line depicts the edge of the tumor.
                         <img src="images/demonstrate/image4.png">
-                        Figure 10. Upon injection into a small tumor with a 1 mm radius, bacteria reaches a maximum of 1010-1011 CFU/gram and keeps a steady population. Growth modeling shows a shallow decline in bacterial density at the edge of the tumor. The dotted vertical line depicts the point of injection, and the solid vertical line depicts the edge of the tumor.
+                        Figure 11. Upon injection into a small tumor with a 1 mm radius, bacteria reaches a maximum of 1010-1011 CFU/gram and keeps a steady population. Growth modeling shows a shallow decline in bacterial density at the edge of the tumor. The dotted vertical line depicts the point of injection, and the solid vertical line depicts the edge of the tumor.
                         <img src="images/demonstrate/image6.png">
-                        Figure 11. This diagram shows the intended mode of delivery for our bacterial therapeutic. In a spherical model tumor, the bacteria would be injected inside the tumor at a point located a radius r away from the center of the tumor
+                        Figure 12. This diagram shows the intended mode of delivery for our bacterial therapeutic. In a spherical model tumor, the bacteria would be injected inside the tumor at a point located a radius r away from the center of the tumor
                     </p>
                 </div>
                 <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading4">Asd Obligate Gene</div></div>
+                    <div class="standard-page-content-title"><div id="pageheading5">Asd Obligate Gene</div></div>
                     <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
                         Another consideration in our project was ensuring the retention of the engineered plasmids within our bacteria. Because the plasmid adds burden to the cell’s metabolic processes, bacteria that carry the plasmid would be selected against [14]. In order to prevent the plasmid from being lost with the growth of the bacterial population, we will use the Lambda Red plasmid system to knock out the Aspartate-semialdehyde dehydrogenase (Asd) gene, which is essential for survival, from the bacterial chromosome [15]. The Asd gene will then be added to our engineered plasmid, making the plasmid required for survival and ensuring that it will be retained from generation to generation. Since our treatment is meant for the human body, we do not want to use traditional methods - such as antibiotic resistance - to ensure that our plasmid is propagated. This is because the human body cannot handle large amounts of antibiotics, especially given that patients are expected to undergo other cancer treatments combined with our therapy.
-                    <p class="standard-page-content-text">
+                        <img src="images/demonstrate/image_5.png">
                         Studies have successfully used E. coli with knocked out Asd genes to create “antibiotic marker-free plasmids” [14]. It is worth noting that the Asd gene codes for a protein responsible for the synthesis of diaminopimelic acid (DAP) - a crucial component for the formation of bacterial cell walls. The absence of the Asd gene leads to the lysis of bacterial cells due to the formation of faulty cells walls. In one study, when plating the transformed bacteria on agar with DAP, the plasmid retention rate is found to range from 80-100% depending on the dilution factor [14].
+                        </p>
                 </div>
                 <div class="standard-page-content-section">
-                    <div class="standard-page-content-title"><div id="pageheading5">Resources</div></div>
+                    <div class="standard-page-content-title"><div id="pageheading6">Resources</div></div>
                     <hr class="yellow-accent-line-left">
                     <div class="standard-page-content-subheading"></div>
                     <p class="standard-page-content-text">
