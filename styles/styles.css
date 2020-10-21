@@ -406,6 +406,11 @@ footer {
 
 /********************* PARTS PAGES START ********************/
 
+.parts-images {
+  padding-left: 20%;
+  width: 80%;
+}
+
 .parts-table table {
   border: 1px solid black;
 }
